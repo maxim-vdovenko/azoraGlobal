@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+  outline: none;
+  -webkit-appearance: none;
+  font-family: 'ArsenicaText', serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+body {
+  background-color: #fff;
+
+  &.activeMobileMenu {
+    overflow: hidden;
+  }
+}
+
+html, body {
+  height: 100%;
+  min-width: $width_min;
+}
+
+img {
+  @include inline_block();
+  border: none; 
+}
+
+a, span, b, strong, i {
+  @include inline_block();
+}
+
+input, textarea, select, button {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, form {
+  @include block();
+}
+
+.totalContainer {
+  @include block();
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.row {
+  @include flex();
+}
+
+.col {
+  @include flex();
+  flex: 1;
+}
+
+#{$cont} {
+  @include block();
+  max-width: $width_max;
+  margin: 0 auto;
+  padding-left: $side;
+  padding-right: $side;
+}

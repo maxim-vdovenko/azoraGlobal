@@ -1,0 +1,20 @@
+.hFooter {
+  height: $footer_height;
+
+  @media (max-width: $screen_lg) {
+    height: $footer_height_mobile;
+  }
+}
+
+.footer {
+  $footer: &;
+  @include block();
+  height: $footer_height;
+  margin-top: -$footer_height;
+
+  @media (max-width: $screen_lg) {
+    height: $footer_height_mobile;
+    margin-top: -$footer_height_mobile;
+  }
+
+}

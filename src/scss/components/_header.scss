@@ -1,0 +1,8 @@
+.header {
+  @include block();
+  z-index: 100;
+
+  #{$cont} {
+    max-width: 1600px;
+  }
+}
