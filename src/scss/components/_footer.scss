@@ -17,4 +17,95 @@
     margin-top: -$footer_height_mobile;
   }
 
+  #{$cont} {
+    max-width: 1413px;
+  }
+
+  &__row {
+    @include flex();
+    border-top: 1px solid #E4E4E7;
+    padding-top: 40px;
+  }
+
+  &__col {
+    position: relative;
+    display: flex;
+    flex: 1;
+
+    &:nth-child(1) {
+      flex-direction: column;
+    }
+
+    &:nth-child(2) {
+      justify-content: flex-end;
+      padding-right: 70px;
+    }
+  }
+
+  &__logo {
+    @include block();
+    @include image('logo.svg', content, center);
+    width: 130px;
+    height: 17px;
+  }
+
+  &__copyright {
+    @include block();
+    margin-top: 9px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #9296A0;
+  }
+
+  &__menu {
+    @include block();
+
+    &:nth-child(1) {
+      margin-right: 195px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 28px;
+    }
+
+    &-title {
+      @include block();
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    &-list {
+      @include block();
+
+      li {
+        @include block();
+        margin: 4px 0;
+      }
+
+      a {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &-phone {
+    @include image('phone-dark.svg', auto 9px, left center);
+    padding-left: 12px;
+  }
+
+  &-email {
+    @include image('email-dark.svg', auto 6px, left center);
+    padding-left: 12px;
+  }
 }

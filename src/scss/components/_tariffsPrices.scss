@@ -1,0 +1,62 @@
+.tariffsPrices {
+  @include block();
+  margin-top: 94px;
+
+  .title{
+    margin: 0 100px;
+  }
+
+  &__block {
+    @include flex();
+    margin: 26px 90px 0 90px;
+  }
+
+  &__box {
+    position: relative;
+    flex: 1;
+    padding: 0 10px;
+
+    &-link {
+      @include flex();
+      flex-direction: column;
+      height: 141px;
+      border: 1px solid #D3D5D9;
+      border-radius: 20px;
+      text-decoration: none;
+      padding: 34px 30px 26px 30px;
+    }
+
+    &-title {
+      @include flex();
+      align-items: center;
+      min-height: 18px;
+
+      span {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin-left: 7px;
+        border-radius: 100px;
+      }
+
+      &--all {
+        span {
+          @include image('arrow-dark.svg', auto 16px, right center);
+          padding-right: 20px;
+        }
+      }
+    }
+
+    &-price {
+      @include block();
+      margin: auto 0 0 0;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}

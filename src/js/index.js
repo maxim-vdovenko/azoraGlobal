@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  os.init()
+  // os.init()
 })
 
 const screen = {

@@ -1,0 +1,51 @@
+.homeBox {
+  @include block();
+  margin-top: 44px;
+
+  &__block {
+    @include flex();
+    min-height: 518px;
+    background-color: #EAE4FF;
+    border-radius: 50px;
+  }
+
+  &__text {
+    @include block();
+    margin-bottom: 34px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+
+    b {
+      @include block();
+    }
+
+    i {
+      @include image('arrow-text-purple.svg', auto 34px, right);
+      @include inline_block();
+      padding-right: 65px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0.02em;
+      color: #6250E5;
+    }
+  }
+
+  &__cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 20px 100px;
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+}

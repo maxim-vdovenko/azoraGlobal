@@ -1,11 +1,25 @@
-.logo {
-  @include image('logo.svg', content, center);
-  width: 120px;
-  height: 40px;
+.title {
+  @include block();
 
-  @media (max-width: $screen_lg) {
-    width: 72px;
-    height: 27px;
+  h1, h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+  }
+
+  &--big {
+    h1, h2 {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  &--center {
+    h1, h2 {
+      text-align: center;
+    }
   }
 }
 
@@ -14,25 +28,25 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 64px;
-  padding: 3px 48px 0 48px;
-  border-radius: 1000px;
-  background-color: transparent;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: $color_dark;
+  color: #fff;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.05em;
-  transition: border-color $time;
+  letter-spacing: 0.02em;
+  transition: border-color, $time;
 
-  @media (max-width: $screen_lg) {
-    height: 50px;
-    padding: 3px 30px 0 30px;
-    font-size: 10px;
-    line-height: 10px;
-    letter-spacing: 0.07em;
+  &--min {
+    height: 36px;
+  }
+
+  &:hover {
+    background-color: #343536;
   }
 }

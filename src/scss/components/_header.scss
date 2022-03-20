@@ -3,6 +3,80 @@
   z-index: 100;
 
   #{$cont} {
-    max-width: 1600px;
+    max-width: 1413px;
+  }
+
+  &__row {
+    @include flex();
+    min-height: $header_height;
+    align-items: center;
+  }
+
+  &__col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &:nth-child(2) {
+      justify-content: center;
+      padding-right: 5px;
+    }
+
+    &:nth-child(3) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__logo {
+    @include block();
+    @include image('logo.svg', content, center);
+    width: 130px;
+    height: 17px;
+  
+    @media (max-width: $screen_lg) {
+      width: 109px;
+      height: 14px;
+    }
+  }
+
+  &__menu {
+    @include block();
+
+    li {
+      @include inline_block();
+      margin: 0 8px;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__entrans {
+    @include image('entrance-gray.svg', auto 16px, left 8px center);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 26px;
+    padding: 0 8px 0 33px;
+    margin-right: 29px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background-color, $time;
+
+    &:hover {
+      background-color: #F1F2F3;
+    }
   }
 }
