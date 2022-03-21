@@ -2,11 +2,21 @@
   @include block();
   margin-top: 44px;
 
+  @media (max-width: $screen_lg) {
+    margin-top: 30px;
+  }
+
   &__block {
     @include flex();
-    min-height: 518px;
+    height: 518px;
     background-color: #EAE4FF;
     border-radius: 50px;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      height: 405px;
+      border-radius: 10px;
+    }
   }
 
   &__text {
@@ -16,6 +26,13 @@
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 0.02em;
+
+    @media (max-width: $screen_lg) {
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+    }
 
     b {
       @include block();
@@ -31,6 +48,15 @@
       line-height: 48px;
       letter-spacing: 0.02em;
       color: #6250E5;
+
+      @media (max-width: $screen_lg) {
+        margin-bottom: 0;
+        padding-right: 35px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        background-size: auto 18px;
+      }
     }
   }
 
@@ -41,11 +67,150 @@
     justify-content: center;
     align-items: flex-start;
     padding: 0 0 20px 100px;
+    z-index: 1;
+
+    @media (max-width: $screen_xl) {
+      padding: 0 20px 20px 30px;
+    }
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+      padding: 30px 16px 0 16px;
+    }
   }
 
   &__form {
     position: relative;
     display: flex;
+    flex: 1;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 85px 13px;
+
+    @media (max-width: $screen_xl) {
+      align-items: flex-end;
+      padding: 0 50px 85px 0; 
+    }
+
+    @media (max-width: $screen_lg) {
+      align-items: center;
+      padding: 36px 0 85px 0; 
+      left: -8px;
+    }
+  }
+
+  &-form {
+    @include block();
+    width: 325px;
+    height: 187px;
+    padding: 20px 30px 26px 30px;
+
+    @media (max-width: $screen_lg) {
+      width: 248px;
+      height: 159px;
+      padding: 16px;
+    }
+
+    &:before {
+      @include image('homeBox-form.svg', contain, center);
+      position: absolute;
+      top: 0;
+      left: -64px;
+      width: 409px;
+      height: 308px;
+      content: '';
+
+      @media (max-width: $screen_lg) {
+        @include image('homeBox-form-mobile.svg', contain, center);
+        left: -59px;
+        width: 330px;
+        height: 258px;
+      }
+    }
+
+    &__weight {
+      @include flex();
+      align-items: center;
+
+      &-title {
+        position: relative;
+        margin-right: 10px;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+
+        @media (max-width: $screen_lg) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+
+      &-input {
+        @include block();
+        width: 68px;
+        height: 36px;
+        padding: 0 16px;
+        border: 1px solid #D3D5D9;
+        background-color: #fff;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    &__select {
+      @include block();
+      margin-top: 9px;
+
+      &:after {
+        @include image('arrow-gray.svg', contain, center);
+        position: absolute;
+        width: 9px;
+        height: 16px;
+        right: 0;
+        top: 50%;
+        margin: -7px 18px 0 0;
+        transform: rotate(90deg);
+        content: '';
+      }
+
+      select {
+        @include block();
+        width: 100%;
+        height: 36px;
+        border: none;
+        padding: 0 14px;
+        background-color: #F1F2F3;
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+
+        @media (max-width: $screen_lg) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    &__price {
+      @include block();
+      margin-top: 24px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $screen_lg) {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
   }
 }

@@ -2,6 +2,14 @@
   @include block();
   margin-top: 182px;
 
+  @media (max-width: $screen_lg) {
+    overflow: auto;
+  }
+
+  @media (max-width: $screen_md) {
+    margin-top: 92px;
+  }
+
   #{$cont} {
     max-width: 1024px;
   }
@@ -9,6 +17,10 @@
   &__block {
     position: relative;
     display: flex;
+
+    @media (max-width: $screen_lg) {
+      height: 280px;
+    }
   }
 
   &__unit {
@@ -17,13 +29,29 @@
     flex-direction: column;
     padding: 0 7.5px;
 
+    @media (max-width: $screen_lg) {
+      padding: 0 10px 0 0;
+    }
+
     &:nth-child(1) {
       width: 33.7%;
+
+      @media (max-width: $screen_lg) {
+        width: auto;
+        min-width: 193px;
+      }
     }
 
     &:nth-child(2) {
       flex: 1;
       padding-right: 202.5px;
+
+      @media (max-width: $screen_lg) {
+        flex: auto;
+        min-width: 396px;
+        padding-left: 193px;
+        padding-right: 20px;
+      }
     }
   }
 
@@ -38,14 +66,28 @@
     padding: 30px 35px 30px 30px;
     width: 100%;
 
+    @media (max-width: $screen_lg) {
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 16px;
+    }
+
     &--registration {
       min-height: 156px;
       background-color: #EAE4FF;
+
+      @media (max-width: $screen_lg) {
+        min-height: auto;
+      }
     }
 
     &--insurance {
       min-height: 178px;
       background-color: #E8FCEB;
+
+      @media (max-width: $screen_lg) {
+        min-height: auto;
+      }
 
       #{$box}-title {
         @include image('insurance-green.svg', auto 24px, right);
@@ -53,12 +95,24 @@
         font-size: 30px;
         line-height: 120%;
         letter-spacing: 0.02em;
+
+        @media (max-width: $screen_lg) {
+          background-size: auto 16px;
+        }
       }
     }
 
     &--import {
       min-height: 200px;
       background-color: #474A52;
+
+      @media (max-width: $screen_lg) {
+        position: absolute;
+        width: 183px;
+        top: 0;
+        left: 0;
+        height: auto;
+      }
 
       #{$box}-title {
         font-size: 30px;
@@ -76,9 +130,19 @@
       background-color: #C8B9FF;
       padding-right: 30px;
 
+      @media (max-width: $screen_lg) {
+        width: 100%;
+        min-height: auto;
+        padding-right: 16px;
+      }
+
       #{$box}-title {
         @include image('tracking-purple.svg', auto 25px, right 1px center);
         width: 100%;
+
+        @media (max-width: $screen_lg) {
+          background-size: auto 14px;
+        }
       }
 
       #{$box}-text a {
@@ -100,6 +164,16 @@
       border-radius: 1000px;
       padding: 40px;
 
+      @media (max-width: $screen_lg) {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        min-height: auto;
+        padding: 16px;
+        border-radius: 10px;
+      }
+
       #{$box}-title {
         font-size: 20px;
         line-height: 26px;
@@ -112,6 +186,11 @@
       font-size: 20px;
       line-height: 26px;
       letter-spacing: 0.02em;
+
+      @media (max-width: $screen_lg) {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
     }
 
     &-text {
@@ -119,6 +198,11 @@
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.02em;
+
+      @media (max-width: $screen_lg) {
+        font-size: 12px !important;
+        line-height: 16px !important;
+      }
     }
 
     &-link {
@@ -135,11 +219,22 @@
       letter-spacing: 0.02em;
       text-decoration: none;
       cursor: pointer;
+
+      @media (max-width: $screen_lg) {
+        font-size: 12px;
+        line-height: 16px;
+        padding-right: 18px;
+        background-size: auto 16px;
+      }
     }
 
     &-list {
       @include flex();
       margin-top: 10px;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 0;
+      }
 
       li {
         @include block();
@@ -147,10 +242,18 @@
         &:first-child {
           border-right: 1px solid #D3D5D9;
           padding-right: 20px;
+
+          @media (max-width: $screen_lg) {
+            padding-right: 8px;
+          }
         }
 
         &:last-child {
           padding-left: 20px;
+
+          @media (max-width: $screen_lg) {
+            padding-left: 8px;
+          }
         }
       }
 
@@ -159,6 +262,11 @@
         font-size: 14px;
         line-height: 18px;
         letter-spacing: 0.02em;
+
+        @media (max-width: $screen_lg) {
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
 
       b {
@@ -166,6 +274,11 @@
         font-size: 20px;
         line-height: 26px;
         letter-spacing: 0.02em;
+
+        @media (max-width: $screen_lg) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
     }
   }

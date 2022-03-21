@@ -1,6 +1,10 @@
 .readyHelp {
   @include block();
   margin: 150px 0;
+
+  @media (max-width: $screen_md) {
+    margin: 78px 0 90px 0;
+  }
   
   #{$cont} {
     max-width: 1010px;
@@ -12,10 +16,21 @@
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.02em;
+
+    @media (max-width: $screen_md) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__block {
     @include flex();
+
+    @media (max-width: $screen_md) {
+      display: block;
+      max-width: 600px;
+      margin: 0 auto;
+    }
   }
 
   &__cont {
@@ -26,6 +41,10 @@
 
   &__unit {
     @include flex();
+
+    @media (max-width: $screen_md) {
+      display: block;
+    }
   }
 
   &__box {
@@ -39,11 +58,32 @@
     margin-left: 21px;
     border-radius: 20px;
 
+    @media (max-width: $screen_xl) {
+      min-width: 250px;
+    }
+
+    @media (max-width: $screen_lg) {
+      min-width: 220px;
+      padding: 20px;
+    }
+
+    @media (max-width: $screen_md) {
+      width: 100%;
+      min-height: 100px;
+      padding: 16px;
+      margin: 20px 0 0 0;
+    }
+
     &-title {
       @include block();
       font-size: 20px;
       line-height: 26px;
       letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
 
     &-email, &-call {

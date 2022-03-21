@@ -2,21 +2,44 @@
   @include block();
   margin-top: 128px;
 
+  @media (max-width: $screen_md) {
+    margin-top: 80px;
+  }
+
   .title {
     max-width: 700px;
     margin: 0 auto;
+
+    @media (max-width: $screen_md) {
+      max-width: 400px;
+
+      h1, h2 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+      }
+    }
   }
 
   &__text {
     @include block();
     max-width: 408px;
     margin: 21px auto 0 auto;
+
+    @media (max-width: $screen_md) {
+      max-width: 400px;
+    }
     
     p {
       font-size: 16px;
       line-height: 22px;
       text-align: center;
       letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 }

@@ -58,4 +58,9 @@ h1, h2, h3, h4, h5, h6, p, form {
   margin: 0 auto;
   padding-left: $side;
   padding-right: $side;
+
+  @media (max-width: $screen_md) {
+    padding-left: $side_mobile;
+    padding-right: $side_mobile;
+  }
 }

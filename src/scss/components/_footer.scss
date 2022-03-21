@@ -1,7 +1,7 @@
 .hFooter {
   height: $footer_height;
 
-  @media (max-width: $screen_lg) {
+  @media (max-width: $screen_md) {
     height: $footer_height_mobile;
   }
 }
@@ -12,7 +12,7 @@
   height: $footer_height;
   margin-top: -$footer_height;
 
-  @media (max-width: $screen_lg) {
+  @media (max-width: $screen_md) {
     height: $footer_height_mobile;
     margin-top: -$footer_height_mobile;
   }
@@ -23,8 +23,27 @@
 
   &__row {
     @include flex();
-    border-top: 1px solid #E4E4E7;
     padding-top: 40px;
+
+    @media (max-width: $screen_md) {
+      flex-direction: column;
+      padding-top: 31px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #E4E4E7;
+      content: '';
+
+      @media (max-width: $screen_md) {
+        left: -$side_mobile;
+        right: -$side_mobile;
+      }
+    }
   }
 
   &__col {
@@ -32,13 +51,18 @@
     display: flex;
     flex: 1;
 
+    @media (max-width: $screen_md) {
+      flex-direction: column;
+      flex: auto;
+      width: 100%;
+    }
+
     &:nth-child(1) {
       flex-direction: column;
     }
 
     &:nth-child(2) {
       justify-content: flex-end;
-      padding-right: 70px;
     }
   }
 
@@ -62,11 +86,43 @@
     @include block();
 
     &:nth-child(1) {
-      margin-right: 195px;
+      width: 180px;
+      margin-right: 103px;
+
+      @media (max-width: $screen_xl) {
+        width: 140px;
+        margin-right: 0;
+      }
+
+      @media (max-width: $screen_md) {
+        width: auto;
+        margin-top: 20px;
+      }
     }
 
     &:nth-child(2) {
-      margin-right: 28px;
+      width: 200px;
+      margin-right: 17px;
+
+      @media (max-width: $screen_md) {
+        width: auto;
+        margin-right: 0;
+        margin-top: 17px;
+        order: 1;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 181px;
+
+      @media (max-width: $screen_xl) {
+        width: 140px;
+      }
+
+      @media (max-width: $screen_md) {
+        width: auto;
+        margin-top: 17px;
+      }
     }
 
     &-title {

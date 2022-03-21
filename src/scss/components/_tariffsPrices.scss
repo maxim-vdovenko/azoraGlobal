@@ -2,19 +2,44 @@
   @include block();
   margin-top: 94px;
 
+  @media (max-width: $screen_md) {
+    margin-top: 90px;
+  }
+
   .title{
     margin: 0 100px;
+
+    @media (max-width: $screen_xl) {
+      margin: 0 10px;
+    }
+
+    @media (max-width: $screen_md) {
+      margin: 0;
+    }
   }
 
   &__block {
     @include flex();
     margin: 26px 90px 0 90px;
+
+    @media (max-width: $screen_xl) {
+      margin: 24px 0 0 0;
+    }
+
+    @media (max-width: $screen_md) {
+      display: block;
+    }
   }
 
   &__box {
     position: relative;
     flex: 1;
     padding: 0 10px;
+
+    @media (max-width: $screen_md) {
+      padding: 0;
+      margin-bottom: 10px;
+    }
 
     &-link {
       @include flex();
@@ -24,6 +49,20 @@
       border-radius: 20px;
       text-decoration: none;
       padding: 34px 30px 26px 30px;
+
+      @media (max-width: $screen_lg) {
+        padding: 24px 20px 26px 20px;
+      }
+
+      @media (max-width: $screen_md) {
+        @include image('arrow-dark.svg', auto 16px, right 19px center);
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 50px;
+        padding: 0 37px 0 16px;
+        border-radius: 10px;
+      }
     }
 
     &-title {
@@ -47,6 +86,10 @@
         span {
           @include image('arrow-dark.svg', auto 16px, right center);
           padding-right: 20px;
+
+          @media (max-width: $screen_md) {
+            background-image: none;
+          }
         }
       }
     }
@@ -57,6 +100,13 @@
       font-weight: 600;
       font-size: 20px;
       line-height: 26px;
+
+      @media (max-width: $screen_md) {
+        margin: 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 }

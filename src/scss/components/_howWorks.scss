@@ -2,8 +2,20 @@
   @include block();
   margin-top: 150px;
 
+  @media (max-width: $screen_md) {
+    margin-top: 77px;
+  }
+
   #{$cont} {
     max-width: 1153px;
+  }
+
+  .title {
+    h1, h2 {
+      @media (max-width: $screen_xs) {
+        text-align: left;
+      }
+    }
   }
 
   &__block {
@@ -11,6 +23,30 @@
     justify-content: space-between;
     margin-top: -55px;
     left: -42px;
+
+    @media (max-width: 1260px) {
+      width: 780px;
+      margin: -60px auto 0 auto;
+      left: auto;
+    }
+
+    @media (max-width: $screen_lg) {
+      width: 640px;
+    }
+
+    @media (max-width: $screen_md) {
+      @include image('how-works-mobile.svg', auto 345px, 0 0);
+      display: block;
+      width: 300px;
+      min-height: 345px;
+      margin: 24px auto 0 auto;
+      padding-left: 50px;
+    }
+
+    @media (max-width: $screen_xs) {
+      width: 280px;
+      margin: 24px 0 0 0;
+    }
 
     &:before {
       @include image('how-works.svg', 100% auto, center);
@@ -20,6 +56,10 @@
       width: 100%;
       height: 300px;
       content: '';
+
+      @media (max-width: $screen_md) {
+        display: none;
+      }
     }
   }
 
@@ -27,12 +67,32 @@
     $box: &;
     position: relative;
 
+    @media (max-width: $screen_md) {
+      display: block;
+      margin-bottom: 30px;
+    }
+
     &:nth-child(1) {
       margin-top: 95px;
       left: 17px;
 
+      @media (max-width: 1260px) {
+        width: 180px;
+        margin-top: 120px;
+        left: auto;
+      }
+
+      @media (max-width: $screen_md) {
+        width: auto;
+        margin-top: 0;
+      }
+
       #{$box}-title, #{$box}-cont {
         width: 280px;
+
+        @media (max-width: $screen_lg) {
+          width: auto;
+        }
       }
     }
 
@@ -40,18 +100,51 @@
       margin-top: 320px;
       left: 22px;
 
+      @media (max-width: 1260px) {
+        margin-top: 285px;
+        left: 25px;
+        width: 280px;
+      }
+
+      @media (max-width: $screen_lg) {
+        margin-top: 260px;
+      }
+
+      @media (max-width: $screen_md) {
+        margin-top: 0;
+        left: auto;
+        width: auto;
+      }
+
       #{$box}-title {
         width: 280px;
+
+        @media (max-width: 1260px) {
+          width: auto;
+        }
       }
 
       #{$box}-cont {
         width: 340px;
+
+        @media (max-width: 1260px) {
+          width: auto;
+        }
       }
     }
 
     &:nth-child(3) {
       margin-top: 162px;
       left: 41px;
+
+      @media (max-width: 1260px) {
+        left: 45px;
+      }
+
+      @media (max-width: $screen_md) {
+        margin-top: 0;
+        left: auto;
+      }
 
       #{$box}-title {
         width: 120px;
@@ -64,6 +157,11 @@
       font-size: 20px;
       line-height: 26px;
       letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
 
     &-cont {
@@ -72,6 +170,11 @@
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
 
     &-info {
@@ -82,6 +185,11 @@
       letter-spacing: 0.02em;
       background-color: #E8FCEB;
       border-radius: 10px;
+
+      @media (max-width: $screen_md) {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
   }
 }
