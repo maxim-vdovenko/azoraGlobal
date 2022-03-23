@@ -2,6 +2,10 @@
   @include block();
   margin-top: 44px;
 
+  #{$cont} {
+    max-width: 1210px;
+  }
+
   @media (max-width: $screen_lg) {
     margin-top: 30px;
   }
@@ -66,7 +70,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 0 20px 100px;
+    padding: 0 20px 20px 100px;
     z-index: 1;
 
     @media (max-width: $screen_xl) {
@@ -88,7 +92,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 0 85px 13px;
+    padding: 0 60px 85px 0;
 
     @media (max-width: $screen_xl) {
       align-items: flex-end;

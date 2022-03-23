@@ -6,28 +6,13 @@
     margin-top: 90px;
   }
 
-  .title{
-    margin: 0 100px;
-
-    @media (max-width: $screen_xl) {
-      margin: 0 10px;
-    }
-
-    @media (max-width: $screen_md) {
-      margin: 0;
-    }
-  }
-
   &__block {
     @include flex();
-    margin: 26px 90px 0 90px;
-
-    @media (max-width: $screen_xl) {
-      margin: 24px 0 0 0;
-    }
+    margin: 26px -10px 0 -10px;
 
     @media (max-width: $screen_md) {
       display: block;
+      margin: 23px 0 0 0;
     }
   }
 
