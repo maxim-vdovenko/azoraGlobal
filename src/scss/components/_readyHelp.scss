@@ -6,10 +6,6 @@
     margin: 78px 0 90px 0;
   }
   
-  #{$cont} {
-    max-width: 1010px;
-  }
-
   &__text {
     @include block();
     margin-top: 16px;

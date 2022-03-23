@@ -1,0 +1,101 @@
+.contacts {
+  @include block();
+  margin-top: 67px;
+
+  @media (max-width: $screen_md) {
+    margin-top: 30px;
+  }
+
+  &__block {
+    @include flex();
+    justify-content: space-between;
+
+    @media (max-width: $screen_md) {
+      display: block;
+    }
+  }
+
+  &__cont {
+    position: relative;
+    padding-right: 20px;
+
+    @media (max-width: $screen_md) {
+      display: block;
+      padding-right: 0;
+    }
+  }
+
+  &__map { 
+    position: relative;
+
+    @media (max-width: $screen_md) {
+      display: block;
+      margin-top: 24px;
+    }
+  }
+
+  &__text {
+    @include block();
+    max-width: 280px;
+    margin-top: 50px;
+    padding-right: 10px;
+
+    @media (max-width: $screen_md) {
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 18px;
+      } 
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 14px;
+        line-height: 18px;
+      } 
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: #6250E5;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-map {
+    @include block();
+    width: 100%;
+    max-width: 680px;
+
+    @media (max-width: $screen_md) {
+      margin-left: -20px;
+      width: calc(100% + 40px);
+      max-width: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

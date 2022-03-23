@@ -19,6 +19,12 @@
       font-weight: 500;
       font-size: 40px;
       line-height: 48px;
+
+      @media (max-width: $screen_md) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+      }
     }
   }
 
