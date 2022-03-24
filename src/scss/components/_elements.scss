@@ -14,6 +14,19 @@
     }
   }
 
+  &--middle {
+    h1, h2 {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 120%;
+      letter-spacing: 0.02em;
+  
+      @media (max-width: $screen_md) {
+        font-size: 20px;
+      }
+    }
+  }
+
   &--big {
     h1, h2 {
       font-weight: 500;
@@ -60,5 +73,78 @@
 
   &:hover {
     background-color: #343536;
+  }
+}
+
+.countries {
+  @include block();
+  border: 1px solid #E4E4E7;
+  border-radius: 10px;
+
+  li {
+    @include block();
+
+    a {
+      @include flex();
+      align-items: center;
+      justify-content: space-between;
+      min-height: 53px;
+      padding: 0 19px 0 16px;
+      text-decoration: none;
+
+      @media (max-width: $screen_md) {
+        min-height: 41px;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #E4E4E7;
+    }
+  }
+
+  &__title {
+    @include flex();
+
+    img {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      border-radius: 1000px;
+
+      @media (max-width: $screen_md) {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__price {
+    @include image('arrow-gray.svg', auto 100%, right);
+    @include flex();
+    align-items: center;
+    height: 16px;
+    padding-right: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+
+    @media (max-width: $screen_md) {
+      height: 14px;
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }
