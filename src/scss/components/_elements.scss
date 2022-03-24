@@ -52,7 +52,7 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.02em;
-  transition: border-color, $time;
+  transition: background-color $time;
 
   &--min {
     height: 36px;

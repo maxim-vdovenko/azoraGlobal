@@ -149,7 +149,7 @@
     line-height: 18px;
     letter-spacing: 0.02em;
     text-decoration: none;
-    transition: background-color, $time;
+    transition: background-color $time;
 
     @media (max-width: $screen_lg) {
       margin-right: 15px;

@@ -1,0 +1,41 @@
+.page-404 {
+  $bl: &;
+  @include block();
+
+  #{$cont} {
+    @include image('404.svg', 600px auto, left 297px top 79px);
+    max-width: 1180px;
+    min-height: 650px;
+    padding-top: 45px;
+
+    @media (max-width: $screen_md) {
+      @include image('404-mobile.svg', 270px auto, right -11px top 72px);
+      min-height: 500px;
+      padding-top: 30px;
+    }
+  }
+
+  &__block {
+    @include block();
+    width: 100%;
+    max-width: 270px;
+
+    p {
+      font-size: 30px;
+      line-height: 120%;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        font-size: 20px;
+      }
+    }
+
+    a {
+      margin-top: 42px;
+
+      @media (max-width: $screen_md) {
+        margin-top: 24px;
+      }
+    }
+  }
+}
