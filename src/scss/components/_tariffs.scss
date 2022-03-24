@@ -2,7 +2,144 @@
   @include block();
   margin-top: 67px;
 
-  // @media (max-width: $screen_md) {
-   
-  // }
+  @media (max-width: $screen_md) {
+    margin-top: 30px;
+  }
+
+  &__block {
+    @include flex();
+    margin-top: 50px;
+
+    @media (max-width: $screen_md) {
+      margin-top: 7px;
+    }
+  }
+
+  &__countries {
+    @include block();
+    min-width: 240px;
+    margin-right: 60px;
+
+    @media (max-width: $screen_md) {
+      display: none;
+    }
+
+    li {
+      @include flex();
+      align-items: center;
+      justify-content: flex-start;
+      height: 36px;
+      border-radius: 10px;
+      padding-left: 38px;
+      transition: background-color $time;
+      cursor: pointer;
+
+      &.active {
+        background-color: #EAE4FF;
+
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      width: 14px;
+      height: 14px;
+      margin-top: -7px;
+      border-radius: 1000px;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em; 
+    }
+  }
+
+  &__cont {
+    @include block();
+    min-width: 230px;
+    padding-top: 3px;
+
+    @media (max-width: $screen_md) {
+      width: 100%;
+      min-width: auto;
+    }
+
+    &-box {
+      position: relative;
+      display: none;
+
+      @media (max-width: $screen_md) {
+        display: block !important;
+
+        &:not(:last-child) {
+          margin-bottom: 34px;
+        }
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &-title {
+      @include block();
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $screen_md) {
+        margin-bottom: 14px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    &-table {
+      position: relative;
+      border-collapse: collapse;
+      width: 100%;
+
+      td {
+        &:nth-child(2) {
+          text-align: right;
+          width: 35%;
+        }
+
+        &:nth-child(3) {
+          width: 35%;
+          text-align: right;
+        }
+      }
+
+      thead td {
+        padding-bottom: 2px;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: #9296A0;
+      }
+
+      tbody {
+        tr:not(:last-child) td {
+          border-bottom: 1px solid #E4E4E7;
+        }
+
+        td {
+          height: 34px;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+  }
 }

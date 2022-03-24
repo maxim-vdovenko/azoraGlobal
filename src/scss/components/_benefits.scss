@@ -1,4 +1,5 @@
 .benefits {
+  $bl: &;
   @include block();
   margin-top: 182px;
 
@@ -104,6 +105,7 @@
 
     &--import {
       min-height: 200px;
+      padding-bottom: 25px;
       background-color: #474A52;
 
       @media (max-width: $screen_lg) {
@@ -199,6 +201,10 @@
       line-height: 18px;
       letter-spacing: 0.02em;
 
+      a:hover {
+        text-decoration: underline;
+      }
+
       @media (max-width: $screen_lg) {
         font-size: 12px !important;
         line-height: 16px !important;
@@ -206,12 +212,12 @@
     }
 
     &-link {
-      @include image('arrow-green.svg', auto 100%, right);
+      @include image('arrow-green.svg', auto 16px, right);
       position: relative;
       display: inline-flex;
       align-items: center;
-      margin-top: 5px;
-      padding-right: 20px;
+      margin-top: 4px;
+      padding-right: 18px;
       min-height: 16px;
       font-size: 14px;
       line-height: 18px;
@@ -219,6 +225,10 @@
       letter-spacing: 0.02em;
       text-decoration: none;
       cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       @media (max-width: $screen_lg) {
         font-size: 12px;
@@ -279,6 +289,30 @@
           font-size: 16px;
           line-height: 22px;
         }
+      }
+    }
+  }
+
+  &--indent {
+    margin-top: 142px;
+
+    @media (max-width: $screen_md) {
+      margin-top: 83px;
+    }
+  }
+
+  &--empty {
+    #{$bl}__box {
+      background-color: #fff;
+      border: 1px solid #D3D5D9;
+
+      &-title, &-text {
+        color: $color_dark;
+      }
+
+      &-link {
+        @include image('arrow-purple.svg', auto 100%, right);
+        color: #6250E5;
       }
     }
   }

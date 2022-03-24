@@ -2,6 +2,10 @@
   @include block();
   margin: 150px 0;
 
+  &--indent {
+    margin: 130px 0 150px 0;
+  }
+  
   @media (max-width: $screen_md) {
     margin: 78px 0 90px 0;
   }

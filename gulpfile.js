@@ -29,6 +29,7 @@ gulp.task('fonts', () => {
 gulp.task('js', () => {
   return gulp.src([
       'node_modules/jquery/dist/jquery.min.js',
+      src + '/js/tariffs.js',
       src + '/js/index.js',
     ])
   .pipe(concat('index.js'))
