@@ -1,0 +1,183 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0})
+
+
+    <section class="regulations">
+
+      <div class="container">
+
+        <div class="regulations__block">
+
+          <div class="title title--big"><h1>Правила работы сервиса</h1></div>
+
+          <div class="textBox">
+            <h2>Требования к посылке</h2>
+            <p>Мы отправляем посылки из португалии во все страны СНГ. Для того, чтобы мы могли принять и отправить вашу посылку — необходимо проверить, соответствует ли она нашим правилам по весу, габаритам, стоимости и содержимому.</p>
+           
+            <h4>Вес</h4>
+            <p>Максимум 20 кг.</p>
+  
+            <h4>Габариты</h4>
+            <p>Максимум 1 м3.</p>
+          </div>
+
+          <div class="regulations__dimensions">
+            <span class="regulations__dimensions-title">Проверьте объем посылки</span>
+
+            <div class="regulations__dimensions-block">
+
+              <div class="regulations__dimensions-box">
+                <div class="regulations__dimensions-input">
+                  <span class="regulations__dimensions-input-title">Длина</span>
+                  <input class="regulations__dimensions-input-value" type="text" />
+                  <span class="regulations__dimensions-input-unit">см</span>
+                </div>
+              </div>
+
+              <div class="regulations__dimensions-box">
+                <div class="regulations__dimensions-input">
+                  <span class="regulations__dimensions-input-title">Ширина</span>
+                  <input class="regulations__dimensions-input-value" type="text" />
+                  <span class="regulations__dimensions-input-unit">см</span>
+                </div>
+              </div>
+
+              <div class="regulations__dimensions-box">
+                <div class="regulations__dimensions-input">
+                  <span class="regulations__dimensions-input-title">Высота</span>
+                  <input class="regulations__dimensions-input-value" type="text" />
+                  <span class="regulations__dimensions-input-unit">см</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="textBox">
+            <h4>Запрещено к отправке</h4>
+            <ul>
+              <li>Оружие;</li>
+              <li>Взрывчатые, едкие и легковоспламеняющиеся вещества;</li>
+              <li>Наркотики;</li>
+              <li>Ядовитые животные и растения;</li>
+              <li>Скоропортящиеся продукты питания;</li>
+              <li>Деньги.</li>
+            </ul>
+  
+            <h2>Страховка</h2>
+            <h4 class="withoutIndent">Бесплатная страховка для посылок до 50€</h4>
+            <p>Возместим стоимость в которую вы оценили посылку и стоимость доставки.</p>
+  
+            <h4>Платная страховка 7€</h4>
+            <p>Если посылка дешевле 1000€ — возместим вам стоимость в которую вы оценили посылку и стоимость доставки.</p>
+            <p>Если посылка дороже 1000€ — возместим вам 1000€ и стоимость доставки.</p>
+  
+            <h2>Упаковка</h2>
+            <p>Мы дополнительно не упаковываем ваши посылки. Для того, чтобы посылка дошла в целости и сохранности вам нужно тщательно ее упаковать. Для упаковки подойдут такие материалы: картонные коробки, поролон, пенопласт, упаковочная пленка и др.</p>
+         
+            <h2>Таможенные лимиты</h2>
+            <p>Пошлина считается как процент от превышения беспошлинного лимита. Как правило пошлину можно оплатить при получении или онлайн.</p>
+            <p>Например стоимость посылки 300€, таможенный лимит 200€, пошлина 15%. Расчет пошлины: (300-200)×0,15=15€.</p>
+          </div>
+
+          <div class="limits">
+            <div class="limits__tab">
+
+              <div class="limits__tab-row limits__tab-row--head">
+                <div class="limits__tab-col"></div>
+                <div class="limits__tab-col"><b>Беспошлинный лимит*</b></div>
+                <div class="limits__tab-col"><b>Пошлина сверх лимита</b></div>
+              </div>
+
+              <div class="limits__tab-row">
+                <div class="limits__tab-col"><img src="img/flags/ua.svg" alt="img" /><span>Украина</span></div>
+                <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>300$</span></div>
+                <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15%</span></div>
+              </div>
+
+              <div class="limits__tab-row">
+                <div class="limits__tab-col"><img src="img/flags/by.svg" alt="img" /><span>Беларусь</span></div>
+                <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>200€</span></div>
+                <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15% или 4€ за 1 кг</span></div>
+              </div>
+
+              <div class="limits__tab-row">
+                <div class="limits__tab-col"><img src="img/flags/kz.svg" alt="img" /><span>Казахстан</span></div>
+                <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>500€</span></div>
+                <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>30% или 4€ за 1 кг</span></div>
+              </div>
+
+              <div class="limits__tab-row">
+                <div class="limits__tab-col"><img src="img/flags/uz.svg" alt="img" /><span>Узбекистан</span></div>
+                <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>1000$</span></div>
+                <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>30% или 3$ за 1 кг</span></div>
+              </div>
+
+              <div class="limits__tab-row">
+                <div class="limits__tab-col"><img src="img/flags/az.svg" alt="img" /><span>Азербайджан</span></div>
+                <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>300$</span></div>
+                <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15%</span></div>
+              </div>
+
+              <div class="limits__tab-row">
+                <div class="limits__tab-col"><img src="img/flags/kg.svg" alt="img" /><span>Кыргызстан</span></div>
+                <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>Без ограничений</span></div>
+                <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span></span></div>
+              </div>
+
+            </div>
+            <span class="limits__info">*  Таможенные лимиты часто меняются. Советуем перед отправкой проверить еще раз, чтобы не было непредвиденных платежей в момент получения.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="readyHelp">
+
+      <div class="container">
+
+        <div class="readyHelp__block">
+
+          <div class="readyHelp__cont">
+
+            <div class="title"><h2>Мы всегда готовы помочь</h2></div>
+            <span class="readyHelp__text">Ответим на вопросы как оформить послыку, и поможем узнать все про отправленные посылки.</span>
+
+          </div>
+
+          <div class="readyHelp__unit">
+
+            <div class="readyHelp__box readyHelp__box--email">
+              <span class="readyHelp__box-title">example@mail.ru</span>
+              <a class="readyHelp__box-email" href="#">Написать</a> 
+            </div>
+
+            <div class="readyHelp__box readyHelp__box--call">
+              <span class="readyHelp__box-title">+351 9992 01 34</span>
+              <a class="readyHelp__box-call" href="#">Позвонить</a> 
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   
