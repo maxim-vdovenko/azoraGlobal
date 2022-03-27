@@ -55,6 +55,7 @@
   justify-content: center;
   height: 48px;
   padding: 0 20px;
+  border: none;
   border-radius: 10px;
   background-color: $color_dark;
   color: #fff;
@@ -377,5 +378,31 @@
     @media (max-width: $screen_md) {
       margin-top: 5px;
     }
+  }
+}
+
+.inputBox {
+  @include block();
+
+  &__title {
+    @include block();
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  &__value {
+    @include block();
+    width: 100%;
+    height: 36px;
+    background-color: #fff;
+    border: 1px solid #D3D5D9;
+    border-radius: 10px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
   }
 }

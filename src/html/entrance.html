@@ -1,0 +1,51 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "", "index" : 0})
+
+
+    <section class="authorization">
+
+      <div class="container">
+
+        <div class="authorization__block">
+
+          <form class="authorization__form authorization__form--entrance">
+
+            <div class="authorization__title">
+              <span class="authorization__title-value">Вход</span>
+              <a class="authorization__title-link" href="registration.html">Регистрация</a>
+            </div>
+  
+            <div class="authorization__cont">
+  
+              <div class="inputBox">
+                <span class="inputBox__title">E-mail</span>
+                <input class="inputBox__value" type="email" />
+              </div>
+  
+              <div class="inputBox">
+                <span class="inputBox__title">Пароль</span>
+                <input class="inputBox__value" type="password" />
+              </div>
+  
+            </div>
+  
+            <div class="authorization__button">
+              <button class="button">Войти</button>
+              <a class="authorization__link" href="#">Восстановить пароль</a>
+            </div>
+  
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+@@include('components/end.html')
+   
