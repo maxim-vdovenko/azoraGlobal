@@ -1,4 +1,5 @@
 .authorization {
+  $bl: &;
   @include block();
   margin-top: 44px;
 
@@ -94,17 +95,6 @@
     justify-content: space-between;
     margin-bottom: 35px;
 
-    &-value {
-      position: relative;
-      font-size: 30px;
-      line-height: 120%;
-      letter-spacing: 0.02em;
-
-      @media (max-width: $screen_md) {
-        font-size: 20px;
-      }
-    }
-
     &-link {
       position: relative;
       margin-top: 9px;
@@ -165,6 +155,73 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  &__text {
+    @include block();
+    margin-top: 10px;
+
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &--empty {
+    @media (max-width: $screen_md) {
+      padding-top: 30px;
+    }
+
+    #{$bl}__block {
+      background-color: transparent;
+      border-radius: 0;
+      padding: 0;
+
+      @media (max-width: $screen_md) {
+        min-height: calc(100vh - 99px);
+      }
+    }
+  
+    #{$bl}__form {
+      max-width: 447px;
+      padding: 0;
+
+      @media (max-width: $screen_md) {
+        display: flex;
+        flex-direction: column;
+        min-height: inherit;
+        max-width: none;
+        width: 100%;
+        padding: 0 $side_mobile;
+      }
+    }
+  
+    #{$bl}__cont {
+      margin-top: 36px;
+    }
+
+    #{$bl}__button {
+      @media (max-width: $screen_md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto -20px 0 -20px;
+        padding: 20px $side_mobile;
+        border-top: 1px solid #E4E4E7;
+      }
+    }
+  }
+
+  &__icon {
+    @include block();
+    margin-bottom: 16px;
+
+    &--email {
+      @include image('email-chek-green.svg', contain, center);
+      width: 34px;
+      height: 26px;
     }
   }
 }
