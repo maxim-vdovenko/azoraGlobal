@@ -16,6 +16,7 @@
 
     @media (max-width: $screen_md) {
       padding: 16px;
+      border-radius: 10px;
     }
 
     &-title {
@@ -36,6 +37,7 @@
 
       @media (max-width: $screen_md) {
         display: block;
+        margin-top: 10px;
       }
     }
 
