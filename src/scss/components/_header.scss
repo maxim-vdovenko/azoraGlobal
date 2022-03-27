@@ -86,7 +86,7 @@
     width: 130px;
     height: 17px;
   
-    @media (max-width: $screen_lg) {
+    @media (max-width: $screen_md) {
       width: 109px;
       height: 14px;
     }
@@ -173,10 +173,10 @@
 
   &--border {
     #{$header}__row {
-      border-bottom: 1px solid #E4E4E7;
+      box-shadow: 0 1px 0 0 #E4E4E7;
 
       @media (max-width: $screen_md) {
-        border-bottom: none;
+        box-shadow: none;
       }
     }
   }
