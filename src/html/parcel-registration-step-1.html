@@ -1,0 +1,100 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0})
+
+
+    <section class="parcel">
+
+      <div class="container">
+        
+        <div class="parcel__back"><a href="#">Назад</a></div>
+
+        <div class="parcel__side">
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__steps">
+              <ul class="parcel__steps-title">
+                <li>Оформление посылки</li>
+                <li><span>1</span> из <span>4</span></li>
+              </ul>
+              <div class="parcel__steps-block">
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box"></div>
+                <div class="parcel__steps-box"></div>
+                <div class="parcel__steps-box"></div>
+              </div>
+            </div>
+
+            <div class="title title--middle"><h1>Отправитель</h1></div>
+
+            <div class="parcel__block">
+
+              <div class="inputBox">
+                <span class="inputBox__title">Имя и фамилия</span>
+                <input class="inputBox__value" type="text" />
+              </div>
+
+              <div class="inputMultilevel">
+
+                <div class="inputMultilevel__unit">
+
+                  <div class="inputBox">
+                    <span class="inputBox__title">E-mail</span>
+                    <input class="inputBox__value" type="email" />
+                  </div>
+
+                </div>
+
+                <div class="inputMultilevel__unit">
+
+                  <div class="inputBox">
+                    <span class="inputBox__title">Телефон</span>
+                    <input class="inputBox__value" type="text" />
+                  </div>
+
+                </div>
+                
+              </div>
+
+              <div class="inputBox">
+                <span class="inputBox__title">NIF</span>
+                <input class="inputBox__value" type="text" />
+              </div>
+
+       
+
+
+
+            </div>
+
+          </div>
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__approximatePrice">
+              <div class="parcel__approximatePrice-icon"></div>
+              <span class="parcel__approximatePrice-title">Примерная стоимость — от <b>35€</b></span>
+              <span class="parcel__approximatePrice-text">Точно сможем рассчитать после заполнения всех данных.</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   

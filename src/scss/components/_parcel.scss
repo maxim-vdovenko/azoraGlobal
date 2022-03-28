@@ -1,0 +1,137 @@
+.parcel {
+  @include block();
+
+  #{$cont} {
+    max-width: $width_big;
+  }
+
+  &__side {
+    @include flex();
+
+    &-box {
+      position: relative;
+
+      @include b();
+    }
+  }
+
+  &__back {
+    @include block();
+
+    a {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      min-height: 12px;
+      padding-left: 17px;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:before {
+        @include image('arrow-dark.svg', contain, center);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 7px;
+        height: 100%;
+        content: '';
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__steps {
+    @include block();
+
+    &-title {
+      @include flex();
+
+      li {
+        @include inline_block();
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+
+      span {
+        @include inline_block();
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+      }
+    }
+
+    &-block {
+      @include flex();
+      margin: 6px -2px 0 -2px;
+    }
+
+    &-box {
+      @include block();
+      flex: 1;
+      height: 4px;
+      background-color: #F1F2F3;
+      border-radius: 100px;
+      margin: 0 2px;
+
+      &.active {
+        background-color: #9E91FB;
+      }
+    }
+  }
+
+  &__approximatePrice {
+    @include block();
+    max-width: 300px;
+    border: 1px solid #67E17A;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 24px;
+
+    &-icon {
+      @include image('approximate-price.svg', contain, center);
+      @include block();
+      width: 64px;
+      height: 52px;
+      margin-bottom: 16px
+    }
+
+    &-title {
+      @include flex();
+      align-items: flex-end;
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+
+      b {
+        position: relative;
+        top: 2px;
+        margin-left: 4px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    &-text {
+      @include block();
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      color: #9296A0;
+    }
+  }
+}
