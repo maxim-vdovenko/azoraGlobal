@@ -2,7 +2,7 @@
 
   <div class="totalContainer"> 
     
-    @@include('components/header.html', {"header" : "", "index" : 0})
+    @@include('components/header.html', {"header" : "", "index" : 0, "authorization" : 0})
     
 
     <section class="homeBox">
@@ -27,11 +27,11 @@
                 <input class="homeBox-form__weight-input" type="text" value="1 кг" />
               </div>
 
-              <div class="homeBox-form__select">
-                <select> 
-                  <option>в Казахстан</option>
-                  <option>в Азербайджан</option>
-                  <option>в Беларусь</option>
+              <div class="homeBox-form__select select">
+                <select>
+                  <option class="flag-kz">в Казахстан</option>
+                  <option class="flag-az">в Азербайджан</option>
+                  <option class="flag-by">в Беларусь</option>
                 </select>
               </div>
 

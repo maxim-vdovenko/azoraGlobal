@@ -29,6 +29,9 @@ gulp.task('fonts', () => {
 gulp.task('js', () => {
   return gulp.src([
       'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
+      'node_modules/bootstrap/dist/js/bootstrap.min.js',
+      'node_modules/inputmask/dist/jquery.inputmask.js',
       src + '/js/tariffs.js',
       src + '/js/index.js',
     ])

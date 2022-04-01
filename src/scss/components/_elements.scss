@@ -68,12 +68,22 @@
   letter-spacing: 0.02em;
   transition: background-color $time;
 
+  &:hover {
+    background-color: #343536;
+  }
+
   &--min {
     height: 36px;
   }
 
-  &:hover {
-    background-color: #343536;
+  &--empty {
+    background-color: transparent;
+    border: 1px solid #BDC0C6;
+    color: $color_dark;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
 
@@ -382,13 +392,48 @@
 }
 
 .inputMultilevel {
+  $mult: &;
   @include flex();
   margin: 0 -8px;
+
+  @media (max-width: $screen_xs) {
+    flex-wrap: wrap;
+  }
 
   &__unit {
     position: relative;
     flex: 1;
     padding: 0 8px;
+
+    @media (max-width: $screen_xs) {
+      flex: auto;
+
+      &:nth-child(1) {
+        width: 50%;
+      }
+
+      &:nth-child(2) {
+        width: 50%;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+      }
+    }
+  }
+
+  &--double {
+    #{$mult}__unit {
+      @media (max-width: $screen_xs) {
+        &:nth-child(1) {
+          width: 100%;
+        }
+  
+        &:nth-child(2) {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -416,4 +461,24 @@
     line-height: 18px;
     letter-spacing: 0.02em;
   }
+
+  &--nif {
+    max-width: 170px;
+
+    @media (max-width: $screen_xs) {
+      max-width: none;
+    }
+  }
+
+  &--half {
+    width: 50%;
+
+    @media (max-width: $screen_xs) {
+      width: auto;
+    }
+  }
+}
+
+.text-color-green {
+  color: #67E17A;
 }

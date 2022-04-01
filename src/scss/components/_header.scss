@@ -12,6 +12,10 @@
     min-height: $header_height;
     align-items: center;
 
+    @media (max-width: $screen_xl) {
+      justify-content: space-between;
+    }
+
     @media (max-width: $screen_md) {
       flex-wrap: wrap;
       min-height: auto;
@@ -23,6 +27,10 @@
     display: flex;
     align-items: center;
     flex: 1;
+
+    @media (max-width: $screen_xl) {
+      flex:auto;
+    }
 
     .button {
       white-space: nowrap;
@@ -49,6 +57,10 @@
     } 
 
     &:nth-child(1) {
+      @media (max-width: $screen_xl) {
+        padding-right: 20px;
+      }
+
       @media (max-width: $screen_md) {
         width: 50%;
         flex: auto;
@@ -60,10 +72,13 @@
       justify-content: center;
       padding-right: 5px;
 
+      @media (max-width: $screen_xl) {
+        justify-content: flex-start;
+      }
+
       @media (max-width: $screen_md) {
         width: 100%;
         flex: auto;
-        justify-content: flex-start;
         padding-right: 0;
         order: 1;
       }
@@ -168,6 +183,124 @@
 
     &:hover {
       background-color: #F1F2F3;
+    }
+  }
+
+  &__popup {
+    $popup: &;
+    @include inline_block();
+    margin-right: 30px;
+    user-select: none;
+
+    @media (max-width: $screen_xl) {
+      margin-right: 10px;
+    }
+
+    &-title {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 0 25px 0 8px;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      border-radius: 6px;
+      cursor: pointer;
+
+      @media (max-width: $screen_md) {
+        @include image('user-dark.svg', auto 12px, center);
+        min-height: auto;
+        height: 24px;
+        width: 24px;
+        padding: 0;
+        border: 1px solid #BDC0C6;
+        overflow: hidden;
+        color: transparent;
+      }
+
+      &:after {
+        @include image('triangle-dark.svg', contain, center);
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 10px;
+        height: 7px;
+        margin-top: -3px;
+        content: '';
+        transition: transform 0.2s;
+
+        @media (max-width: $screen_md) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        background-color: #F1F2F3;
+      }
+    }
+
+    &-list {
+      position: absolute;
+      display: none;
+      top: 29px;
+      right: 0;
+      min-width: 210px;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0px 6px 16px rgba(134, 153, 174, 0.2);
+      overflow: hidden;
+
+      @media (max-width: $screen_md) {
+        top: 27px;
+        border-radius: 6px;
+      }
+
+      li {
+        @include block();
+      }
+
+      a {
+        @include flex();
+        align-items: center;
+        min-height: 48px;
+        padding: 0 16px 0 38px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        transition: background-color 0.1s;
+
+        &:hover {
+          background-color: #F1F2F3;
+        }
+
+        &.header-ic-orders {
+          @include image('orders-dark.svg', auto 14px, left 17px center);
+        }
+
+        &.header-ic-data {
+          @include image('user-dark.svg', auto 14px, left 17px center);
+        }
+
+        &.header-ic-exit {
+          @include image('exit-dark.svg', auto 14px, left 16px center);
+        }
+      }
+    }
+
+    &.active {
+      #{$popup}-title {
+        background-color: #F1F2F3;
+
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+
+      #{$popup}-list {
+        display: block;
+      }
     }
   }
 

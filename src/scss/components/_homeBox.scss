@@ -167,37 +167,49 @@
     }
 
     &__select {
-      @include block();
       margin-top: 9px;
 
-      &:after {
-        @include image('arrow-gray.svg', contain, center);
-        position: absolute;
-        width: 9px;
-        height: 16px;
-        right: 0;
-        top: 50%;
-        margin: -7px 18px 0 0;
-        transform: rotate(90deg);
-        content: '';
+      .jq-selectbox__select {
+        border: none;
+        background-color: #F1F2F3;
+
+        &-text {
+          width: auto;
+          padding-right: 0;
+          font-size: 16px;
+          line-height: 22px;
+          color: $color_dark;
+
+          @media (max-width: $screen_md) {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+
+        &:after {
+          @include inline_block();
+          margin-left: 10px;
+          min-width: 18px;
+          height: 18px;
+          content: '';
+          border-radius: 1000px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
       }
 
-      select {
-        @include block();
-        width: 100%;
-        height: 36px;
-        border: none;
-        padding: 0 14px;
-        background-color: #F1F2F3;
-        border-radius: 10px;
-        font-size: 16px;
-        line-height: 22px;
-        letter-spacing: 0.02em;
-        cursor: pointer;
-
-        @media (max-width: $screen_lg) {
-          font-size: 14px;
-          line-height: 18px;
+      .jq-selectbox__dropdown li {
+        &:after {
+          @include inline_block();
+          margin-left: 10px;
+          width: 18px;
+          height: 18px;
+          content: '';
+          border-radius: 1000px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
         }
       }
     }

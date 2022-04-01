@@ -18,17 +18,17 @@
             <div class="parcel__steps">
               <ul class="parcel__steps-title">
                 <li>Оформление посылки</li>
-                <li><span>1</span> из <span>4</span></li>
+                <li><span>2</span> из <span>4</span></li>
               </ul>
               <div class="parcel__steps-block">
                 <div class="parcel__steps-box active"></div>
-                <div class="parcel__steps-box"></div>
+                <div class="parcel__steps-box active"></div>
                 <div class="parcel__steps-box"></div>
                 <div class="parcel__steps-box"></div>
               </div>
             </div>
 
-            <div class="title title--middle"><h1>Отправитель</h1></div>
+            <div class="title title--middle"><h1>Получатель</h1></div>
 
             <div class="parcel__block">
 
@@ -37,52 +37,30 @@
                 <input class="inputBox__value" type="text" />
               </div>
 
-              <div class="inputMultilevel inputMultilevel--double">
-
-                <div class="inputMultilevel__unit">
-
-                  <div class="inputBox">
-                    <span class="inputBox__title">E-mail</span>
-                    <input class="inputBox__value" type="email" />
+              <div class="inputBox inputBox--half">
+                <span class="inputBox__title">Телефон</span>
+                <div class="selectPhone">
+                  <div class="select">
+                    <select>
+                      <option class="flag-az">+351</option>
+                      <option class="flag-ua">+380</option>
+                      <option class="flag-kz">+344</option>
+                      <option class="flag-pt">+370</option>
+                      <option class="flag-uz">+380</option>
+                      <option class="flag-kg">+390</option>
+                    </select>
                   </div>
-
+                  <input class="selectPhone__value input-phone" type="text" />
                 </div>
-
-                <div class="inputMultilevel__unit">
-
-                  <div class="inputBox">
-                    <span class="inputBox__title">Телефон</span>
-                    <div class="selectPhone">
-                      <div class="select">
-                        <select>
-                          <option class="flag-ua">+380</option>
-                          <option class="flag-az">+351</option>
-                          <option class="flag-kz">+344</option>
-                          <option class="flag-pt">+370</option>
-                          <option class="flag-uz">+380</option>
-                          <option class="flag-kg">+390</option>
-                        </select>
-                      </div>
-                      <input class="selectPhone__value input-phone" type="text" />
-                    </div>
-                  </div>
-
-                </div>
-                
               </div>
 
-              <div class="inputBox inputBox--nif">
-                <span class="inputBox__title">NIF</span>
-                <input class="inputBox__value input-numbers" type="text" />
-              </div>
-
-              <span class="parcel__separatorText">Откуда</span>
+              <span class="parcel__separatorText">Куда</span>
 
               <div class="inputBox">
-                <span class="inputBox__title">Регион</span>
+                <span class="inputBox__title">Область</span>
                 <div class="select">
                   <select>
-                    <option>Выберите регион</option>
+                    <option>Выберите область</option>
                     <option>Киев</option>
                     <option>Одесса</option>
                     <option>Львов</option>

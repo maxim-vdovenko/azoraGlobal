@@ -1,0 +1,96 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="parcel">
+
+      <div class="container">
+        
+        <div class="parcel__back"><a href="#">Назад</a></div>
+
+        <div class="parcel__side">
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__steps">
+              <ul class="parcel__steps-title">
+                <li>Оформление посылки</li>
+                <li><span>2</span> из <span>4</span></li>
+              </ul>
+              <div class="parcel__steps-block">
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box"></div>
+                <div class="parcel__steps-box"></div>
+              </div>
+            </div>
+
+            <div class="title title--middle"><h1>Получатель</h1></div>
+
+            <div class="parcel__block">
+
+              <div class="inputBox">
+                <span class="inputBox__title">Имя и фамилия</span>
+                <input class="inputBox__value" type="text" />
+              </div>
+
+              <div class="inputBox inputBox--half">
+                <span class="inputBox__title">Телефон</span>
+                <div class="selectPhone">
+                  <div class="select">
+                    <select>
+                      <option class="flag-az">+351</option>
+                      <option class="flag-ua">+380</option>
+                      <option class="flag-kz">+344</option>
+                      <option class="flag-pt">+370</option>
+                      <option class="flag-uz">+380</option>
+                      <option class="flag-kg">+390</option>
+                    </select>
+                  </div>
+                  <input class="selectPhone__value input-phone" type="text" />
+                </div>
+              </div>
+
+              <span class="parcel__separatorText">Куда</span>
+
+              <div class="inputBox">
+                <span class="inputBox__title">Адрес</span>
+                <input class="inputBox__value" type="text" />
+              </div>
+
+              <div class="inputBox inputBox--nif">
+                <span class="inputBox__title">Индекс</span>
+                <input class="inputBox__value input-numbers" type="text" />
+              </div>
+
+            </div>
+
+            <div class="parcel__button">
+              <a class="button" href="#">Дальше</a>
+            </div>
+
+          </div>
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__approximatePrice">
+              <div class="parcel__approximatePrice-icon"></div>
+              <span class="parcel__approximatePrice-title">Примерная стоимость — от <b>35€</b></span>
+              <span class="parcel__approximatePrice-text">Точно сможем рассчитать после заполнения всех данных.</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   
