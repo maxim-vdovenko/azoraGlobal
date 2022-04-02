@@ -33,6 +33,7 @@ gulp.task('js', () => {
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
       src + '/js/tariffs.js',
+      src + '/js/parcel.js',
       src + '/js/index.js',
     ])
   .pipe(concat('index.js'))

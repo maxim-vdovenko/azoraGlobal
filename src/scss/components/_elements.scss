@@ -460,6 +460,11 @@
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.02em;
+
+    &.input-calendar {
+      @include image('calendar-gray.svg', 18px auto, right 16px center);
+      padding-right: 47px;
+    }
   }
 
   &--nif {

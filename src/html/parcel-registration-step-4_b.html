@@ -1,0 +1,135 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="parcel">
+
+      <div class="container">
+        
+        <div class="parcel__back"><a href="#">Назад</a></div>
+
+        <div class="parcel__side">
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__steps">
+              <ul class="parcel__steps-title">
+                <li>Оформление посылки</li>
+                <li><span>4</span> из <span>4</span></li>
+              </ul>
+              <div class="parcel__steps-block">
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box active"></div>
+              </div>
+            </div>
+
+            <div class="title title--middle"><h1>Как отправить</h1></div>
+
+            <ul class="parcel__sendMenu">
+              <li class="active">Из пункта приема</li>
+              <li>Курьером</li>
+            </ul>
+
+            <div class="parcel__points active">
+
+              <div class="parcel__pointsMap">
+
+                <div class="parcel__pointsMap-block">
+
+                  <div class="parcel__pointsMap-side">
+                    <div class="parcel__pointsMap-text">
+                      <h4>Loja CTT Heróis de Chaimite (Odivelas)</h4>
+                      <p>Rua Heróis de Chaimite №43, Odivelas 2675-998</p>
+                    </div>
+                    <ul class="parcel__pointsMap-list">
+                      <li>09:00–12:30</li>
+                      <li>14:00–18:00</li>
+                    </ul>
+                  </div>
+
+                  <div class="parcel__pointsMap-side">
+
+                    <div class="parcel__pointsMap-cont"><img src="../img/map-small.jpg" alt="img" /></div>
+
+                  </div>
+
+                </div>
+
+                <div class="parcel__pointsMap-button">
+                  <span class="button button--min button--empty">Выбрать другой пункт</span>
+                </div>
+        
+              </div>
+
+            </div>
+
+            <div class="parcel__courier">
+              <div class="parcel__courier-info">
+                <p>Курьер приедет по адресу, который вы указали в отправлении. Это будет бесплатно.</p>
+              </div>
+
+              <span class="parcel__separatorText">Когда курьеру подъехать</span>
+
+              <div class="parcel__courier-block">
+
+                <div class="parcel__courier-box">
+
+                  <div class="inputBox">
+                    <span class="inputBox__title">Дата</span>
+                    <input class="inputBox__value input-calendar" type="text" />
+                  </div>
+
+                </div>
+
+                <div class="parcel__courier-box">
+
+                  <div class="inputBox">
+                    <span class="inputBox__title">Время</span>
+                    <div class="select">
+                      <select>
+                        <option>Выберите время</option>
+                        <option>9:00–12:00</option>
+                        <option>12:00–15:00</option>
+                        <option>15:00–18:00</option>
+                        <option>18:00–21:00</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="parcel__button">
+              <a class="button" href="#">Дальше</a>
+            </div>
+
+          </div>
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__approximatePrice parcel__approximatePrice--info">
+              <div class="parcel__approximatePrice-icon"></div>
+              <span class="parcel__approximatePrice-info">Пересылка <b>35€</b></span>
+              <span class="parcel__approximatePrice-info">Страховка <b class="text-color-green">Бесплатно</b></span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   

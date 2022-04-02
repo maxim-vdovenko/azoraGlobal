@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   headerPopup.init()
   tariffs.init()
   select.init()
+  parcel.init()
 })
 
 

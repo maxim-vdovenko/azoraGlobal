@@ -1,0 +1,58 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="parcel">
+
+      <div class="container">
+        
+        <div class="parcel__back"><a href="#">Назад</a></div>
+
+        <div class="parcel__side parcel__side--wide">
+
+          <div class="parcel__side-head">
+            <div class="title title--middle"><h1>Проверьте данные</h1></div>
+            <span class="parcel__informer parcel__informer--green">Мы перевели данные на английский язык, проверьте верно ли. </span>
+          </div>
+
+          <div class="parcel__side-unit">
+
+            <div class="parcel__dataInfo">
+              <h2>Отправитель</h2>
+              <ul>
+                <li>Petrov Vasiliy</li>
+                <li>example@post.com</li>
+                <li>+351 673 88 88 9</li>
+                <li>NIF 240144733</li>
+                <li>1000-260, Portugalia, Lissabon 37 Jade-Mountain, apr 2,</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="parcel__side-unit">
+
+            <div class="parcel__dataInfo">
+              <h2>Получатель</h2>
+              <ul>
+                <li>Kalinin Mark</li>
+                <li>+7 911 945-24-23</li>
+                <li>197198, Russia, Saint-Petersburg, Mytninskiy lane 11, 54</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   
