@@ -1,0 +1,256 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="parcel">
+
+      <div class="container">
+        
+        <div class="parcel__back"><a href="#">Назад</a></div>
+
+        <div class="parcel__side parcel__side--wide">
+
+          <div class="parcel__side-head">
+            <div class="title title--middle"><h1>Проверьте данные</h1></div>
+            <span class="parcel__informer parcel__informer--green">Мы перевели данные на английский язык, проверьте верно ли. </span>
+          </div>
+
+          <div class="parcel__side-unit parcel__side-unit--left">
+
+            <div class="parcel__title"><h2>Отправитель</h2></div>
+
+            <div class="parcel__block">
+
+              <div class="inputBox">
+                <span class="inputBox__title">Имя и фамилия</span>
+                <input class="inputBox__value" type="text" value="Vasiliy Petrov" />
+              </div>
+
+              <div class="inputMultilevel inputMultilevel--double">
+
+                <div class="inputMultilevel__unit">
+
+                  <div class="inputBox">
+                    <span class="inputBox__title">E-mail</span>
+                    <input class="inputBox__value" type="email" value="example@post.com" />
+                  </div>
+
+                </div>
+
+                <div class="inputMultilevel__unit">
+
+                  <div class="inputBox">
+                    <span class="inputBox__title">Телефон</span>
+                    <div class="selectPhone">
+                      <div class="select">
+                        <select>
+                          <option class="flag-pt">+370</option>
+                          <option class="flag-ua">+380</option>
+                          <option class="flag-az">+351</option>
+                          <option class="flag-kz">+344</option>
+                          <option class="flag-uz">+380</option>
+                          <option class="flag-kg">+390</option>
+                        </select>
+                      </div>
+                      <input class="selectPhone__value input-phone" type="text" value="673 88 88 9" />
+                    </div>
+                  </div>
+
+                </div>
+                
+              </div>
+
+              <div class="inputBox inputBox--nif">
+                <span class="inputBox__title">NIF</span>
+                <input class="inputBox__value input-numbers" type="text" value="240144733" />
+              </div>
+
+              <span class="parcel__separatorText">Откуда</span>
+
+              <div class="inputBox">
+                <span class="inputBox__title">Регион</span>
+                <div class="select">
+                  <select>
+                    <option>Выберите регион</option>
+                    <option selected>Lisbon Metropolitan Area</option>
+                    <option>Одесса</option>
+                    <option>Львов</option>
+                    <option>Херсон</option>
+                    <option>Винница</option>
+                    <option>Днепр</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="inputBox">
+                <span class="inputBox__title">Город или населенный пункт</span>
+                <input class="inputBox__value" type="text" value="Lissabon" />
+              </div>
+
+              <div class="inputBox">
+                <span class="inputBox__title">Улица</span>
+                <input class="inputBox__value" type="text" value="Jade-Mountain" />
+              </div>
+
+              <div class="inputMultilevel">
+
+                <div class="inputMultilevel__unit">
+                  <div class="inputBox">
+                    <span class="inputBox__title">Дом</span>
+                    <input class="inputBox__value input-numbers" type="text" value="37" />
+                  </div>
+                </div>
+
+                <div class="inputMultilevel__unit">
+                  <div class="inputBox">
+                    <span class="inputBox__title">Квартира</span>
+                    <input class="inputBox__value input-numbers" type="text" value="2" />
+                  </div>
+                </div>
+
+                <div class="inputMultilevel__unit">
+                  <div class="inputBox">
+                    <span class="inputBox__title">Индекс</span>
+                    <input class="inputBox__value" type="text" value="1000-260" />
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="parcel__side-unit parcel__side-unit--right">
+
+            <div class="parcel__title"><h2>Получатель</h2></div>
+
+            <div class="parcel__block">
+
+              <div class="inputBox">
+                <span class="inputBox__title">Имя и фамилия</span>
+                <input class="inputBox__value" type="text" value="Kalinin Mark" />
+              </div>
+
+              <div class="inputBox inputBox--half">
+                <span class="inputBox__title">Телефон</span>
+                <div class="selectPhone">
+                  <div class="select">
+                    <select>
+                      <option class="flag-kg">+390</option>
+                      <option class="flag-az">+351</option>
+                      <option class="flag-ua">+380</option>
+                      <option class="flag-kz">+344</option>
+                      <option class="flag-pt">+370</option>
+                      <option class="flag-uz">+380</option>
+                    </select>
+                  </div>
+                  <input class="selectPhone__value input-phone" type="text" value="1 945-24-23" />
+                </div>
+              </div>
+
+              <span class="parcel__separatorText">Куда</span>
+
+              <div class="inputBox">
+                <span class="inputBox__title">Область</span>
+                <div class="select">
+                  <select>
+                    <option>Выберите регион</option>
+                    <option selected>Karagandinskaya Oblast</option>
+                    <option>Одесса</option>
+                    <option>Львов</option>
+                    <option>Херсон</option>
+                    <option>Винница</option>
+                    <option>Днепр</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="inputBox">
+                <span class="inputBox__title">Город или населенный пункт</span>
+                <input class="inputBox__value" type="text" value="Karagandy" />
+              </div>
+
+              <div class="inputBox">
+                <span class="inputBox__title">Улица</span>
+                <input class="inputBox__value" type="text" value="Ulitsa Novaya" />
+              </div>
+
+              <div class="inputMultilevel">
+
+                <div class="inputMultilevel__unit">
+                  <div class="inputBox">
+                    <span class="inputBox__title">Дом</span>
+                    <input class="inputBox__value input-numbers" type="text" value="21" />
+                  </div>
+                </div>
+
+                <div class="inputMultilevel__unit">
+                  <div class="inputBox">
+                    <span class="inputBox__title">Квартира</span>
+                    <input class="inputBox__value input-numbers" type="text" value="2" />
+                  </div>
+                </div>
+
+                <div class="inputMultilevel__unit">
+                  <div class="inputBox">
+                    <span class="inputBox__title">Индекс</span>
+                    <input class="inputBox__value" type="text" value="100000" />
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="parcel__side-send">
+
+            <div class="parcel__send parcel__send--indentMin">
+
+              <div class="parcel__send-box">
+                <button class="button">Оплатить 3€</button>
+              </div>
+  
+              <div class="parcel__send-box">
+                <span class="parcel__send-info">3€— это знак, что вы действительно хотите отправить посылку.</span>
+              </div>
+  
+              <div class="parcel__send-box">
+                <a class="link" href="#">Отмена</a>
+              </div>
+  
+              <div class="parcel__send-box">
+
+                <div class="checkBox">
+                  <input type="checkbox" id="checkbox-info" />
+                  <label for="checkbox-info">Ознакомлен</label>
+                  <a href="#">с перечнем запрещенных для пересылки товаров</a>
+                </div>
+
+                <div class="checkBox">
+                  <input type="checkbox" id="checkbox-dimensions" />
+                  <label for="checkbox-dimensions">Габариты посылки не превышают</label>
+                  <a href="#">установленные нормы</a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   

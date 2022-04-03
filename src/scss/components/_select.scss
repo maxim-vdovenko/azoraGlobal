@@ -24,6 +24,7 @@
       background-color: #fff;
       border: 1px solid #D3D5D9;
       transition: background-color 0.15s;
+      user-select: none;
 
       &-text {
         position: relative;

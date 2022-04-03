@@ -68,6 +68,13 @@
   letter-spacing: 0.02em;
   transition: background-color $time;
 
+  span {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
   &:hover {
     background-color: #343536;
   }
@@ -82,7 +89,35 @@
     color: $color_dark;
 
     &:hover {
-      background-color: transparent;
+      background-color: #F1F2F3;
+    }
+  }
+
+  &--edit {
+    @include image('editing-dark.svg', auto 16px, left 20px center);
+    background-color: transparent;
+    border: 1px solid #BDC0C6;
+    color: $color_dark;
+    padding: 0 18px 0 42px;
+
+    span {
+      &:nth-child(1) {
+        @media (max-width: $screen_md) {
+          display: none;
+        } 
+      }
+
+      &:nth-child(2) {
+        display: none;
+
+        @media (max-width: $screen_md) {
+          display: block;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #F1F2F3;
     }
   }
 }
@@ -481,6 +516,88 @@
     @media (max-width: $screen_xs) {
       width: auto;
     }
+  }
+}
+
+.checkBox {
+  @include block();
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    & + label {
+      @include inline_block();
+      min-height: 16px;
+      padding-left: 23px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      color: #333;
+      cursor: pointer;
+
+      &:before {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #18191B;
+        border-radius: 4px;
+        content: '';
+      }
+
+      &:after {
+        @include image('chek-white.svg', 10px auto, center);
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        content: '';
+        opacity: 0;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  a {
+    @include inline_block();
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: #6250E5;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #9E91FB;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
