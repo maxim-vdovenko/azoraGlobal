@@ -1,0 +1,144 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="parcel">
+
+      <div class="container">
+        
+        <div class="parcel__back"><a href="#">Назад</a></div>
+
+        <div class="parcel__side">
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__steps">
+              <ul class="parcel__steps-title">
+                <li>Оформление посылки</li>
+                <li><span>3</span> из <span>4</span></li>
+              </ul>
+              <div class="parcel__steps-block">
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box active"></div>
+                <div class="parcel__steps-box"></div>
+              </div>
+            </div>
+
+            <div class="title title--middle"><h1>Посылка</h1></div>
+
+            <div class="parcel__block">
+
+              <div class="inputUnit">
+                <span class="inputUnit__title">Вес</span>
+                <div class="inputUnit__block">
+                  <div class="inputUnit__box">
+                    <input class="inputUnit__value input-numbers" type="text" maxlength="3" />
+                    <span class="inputUnit__inf">кг</span>
+                  </div>
+                  <div class="inputUnit__box">
+                    <span class="inputUnit__text">Макс. 20 кг</span>
+                  </div>
+                </div>
+              </div>
+
+              <span class="parcel__separatorText">Содержимое, для таможенной декларации</span>
+
+              <div class="parcel__table">
+
+                <div class="parcel__table-head">
+                  <span class="parcel__table-box">Описание</span>
+                  <span class="parcel__table-box">Кол-во</span>
+                  <span class="parcel__table-box">Цена, примерно</span>
+                  <span class="parcel__table-box">Вес, примерно</span>
+                </div>
+
+                <div class="parcel__table-body">
+
+                  <span class="parcel__table-thing">Вещь 1</span>
+                  <div class="parcel__table-bodyBox">
+
+                    <div class="parcel__table-box">
+                      <span class="parcel__table-title">Описание</span>
+                      <div class="parcel__table-input">
+                        <input class="parcel__table-input-value" type="text" />
+                      </div>
+                    </div>
+  
+                    <div class="parcel__table-box">
+                      <span class="parcel__table-title">Кол-во</span>
+                      <div class="parcel__table-input">
+                        <input class="parcel__table-input-value input-numbers" type="text" />
+                        <div class="parcel__table-input-top"></div>
+                        <div class="parcel__table-input-bottom"></div>
+                      </div>
+                    </div>
+  
+                    <div class="parcel__table-box">
+                      <span class="parcel__table-title">Цена, примерно</span>
+                      <div class="parcel__table-input">
+                        <input class="parcel__table-input-value" type="text" />
+                        <span class="parcel__table-input-unit">€</span>
+                      </div>
+                    </div>
+  
+                    <div class="parcel__table-box">
+                      <span class="parcel__table-title">Вес, примерно</span>
+                      <div class="parcel__table-input">
+                        <input class="parcel__table-input-value" type="text" />
+                        <span class="parcel__table-input-unit">кг</span>
+                      </div>
+                    </div>
+
+                    <div class="parcel__table-close"></div>
+  
+                  </div>
+
+                </div>
+
+                <div class="parcel__table-foot">
+                  <span class="parcel__table-add">Добавить</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="parcel__button">
+              <a class="button" href="#">Дальше</a>
+            </div>
+
+          </div>
+
+          <div class="parcel__side-box">
+
+            <div class="parcel__approximatePrice">
+              <div class="parcel__approximatePrice-icon"></div>
+              <span class="parcel__approximatePrice-title">Примерная стоимость — от <b>35€</b></span>
+              <span class="parcel__approximatePrice-text">Точно сможем рассчитать после заполнения всех данных.</span>
+            </div>
+
+            <div class="parcel__checkSending">
+              <span class="parcel__checkSending-title">Проверьте перед отправкой</span>
+              <ul class="parcel__checkSending-list">
+                <li><span>Максимум 1 м3</span><a href="#">Проверить</a></li>
+                <li><span>Запрещено к отправке</span></li>
+                <li><span>Как упаковать посылку</span></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   

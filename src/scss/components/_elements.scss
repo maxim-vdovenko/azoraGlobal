@@ -519,6 +519,71 @@
   }
 }
 
+.inputUnit {
+  @include block();
+
+  &__title {
+    @include block();
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    user-select: none;
+  }
+
+  &__block {
+    @include flex();
+  }
+
+  &__box {
+    @include flex();
+    flex-direction: column;
+    justify-content: center;
+
+    &:nth-child(2) {
+      padding-left: 8px;
+    }
+  }
+
+  &__value {
+    @include block();
+    width: 78px;
+    height: 36px;
+    padding: 0 35px 0 16px;
+    background-color: #fff;
+    border: 1px solid #D3D5D9;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+  }
+
+  &__inf {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-right: 16px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #9296A0;
+    user-select: none;
+  }
+
+  &__text {
+    @include inline_block();
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9296A0;
+    user-select: none;
+  }
+}
+
 .checkBox {
   @include block();
 
@@ -540,6 +605,7 @@
       letter-spacing: 0.02em;
       color: #333;
       cursor: pointer;
+      user-select: none;
 
       &:before {
         position: absolute;
@@ -584,6 +650,34 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  &--empty {
+    input {
+      & + label {
+        &:before, &:after {
+          width: 14px;
+          height: 14px;
+        }
+  
+        &:before {
+          background-color: transparent;
+          border: 1px solid #BDC0C6;
+        }
+  
+        &:after {
+          @include image('chek-green.svg', 12px auto, left 2px top 4px);
+        }
+      }
+
+      &:checked {
+        & + label {
+          &:before {
+            border: 1px solid transparent;
+          }
+        }
+      }
     }
   }
 }
