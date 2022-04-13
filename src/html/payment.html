@@ -1,0 +1,88 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="parcel">
+
+      <div class="container">
+        
+        <div class="parcel__back"><a href="#">Назад</a></div>
+
+        <form class="payment">
+
+          <div class="title title--big"><h1>К оплате 3€</h1></div>
+
+          <div class="payment__cont">
+
+            <div class="payment__cards">
+
+            </div>
+
+            <div class="payment__block">
+              
+              <div class="payment__box">
+                <div class="payment__input">
+                  <span class="payment__input-title">Номер карты</span>
+                  <div class="payment__input-cont">
+                    <input class="payment__input-valie" type="text" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment__box">
+                <div class="payment__input">
+                  <span class="payment__input-title">Срок истечения карты</span>
+                  <div class="payment__input-cont">
+                    <input class="payment__input-valie" type="text" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="payment__block">
+              
+              <div class="payment__box payment__box--double">
+                <div class="payment__input">
+                  <span class="payment__input-title">Владелец карты</span>
+                  <div class="payment__input-cont">
+                    <input class="payment__input-valie" type="text" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment__box payment__box--double">
+                <div class="payment__input">
+                  <span class="payment__input-title">CSV/CVV</span>
+                  <div class="payment__input-cont">
+                    <input class="payment__input-valie" type="text" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="payment__address">
+              <span class="payment__address-title">Платежный адрес</span>
+              <span class="payment__address-value">Bakhmacha, 1, kv. 2, 2333223, Kiev, UA, Kiev <i class="payment__address-inf">(edit)</i></span>
+            </div>
+
+          </div>
+
+          <div class="payment__button">
+            <button class="button">Оплатить</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   

@@ -1,0 +1,61 @@
+.orderProcessed {
+  @include block();
+  margin-top: 44px;
+
+  @media (max-width: $screen_md) {
+    margin-top: 30px;
+  }
+
+  #{$cont} {
+    padding: 0 47px;
+
+    @media (max-width: $screen_md) {
+      padding: 0 $side_mobile;
+    }
+  }
+
+  &__status {
+    @include block();
+    max-width: 564px;
+    margin-top: 10px;
+    padding-bottom: 34px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #E4E4E7;
+
+    @media (max-width: $screen_md) {
+      max-width: none;
+    }
+
+    a {
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      text-decoration: none;
+      color: #6250E5;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__info {
+    @include block();
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+  }
+
+  &__reception {
+    @include block();
+    max-width: 380px;
+    margin-top: 36px;
+
+    @media (max-width: $screen_md) {
+      max-width: none;
+    } 
+  }
+}

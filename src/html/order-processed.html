@@ -1,0 +1,54 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="orderProcessed">
+
+      <div class="container">
+        
+        <div class="title title--middle"><h1>Заказ оформлен</h1></div>
+
+        <span class="orderProcessed__status">Отслеживать статус заказа можно <a href="#">в личном кабинете.</a></span>
+        <span class="orderProcessed__info">Информация о заказе</span>
+
+        <div class="orderProcessed__reception">
+
+          <div class="receptionPoint">
+            <span class="receptionPoint__name">Отнесите посылку в пункт приема</span>
+            <span class="receptionPoint__date">до 12 декабря</span>
+  
+            <div class="receptionPoint__cont">
+              <div class="receptionPoint__box">
+                <p>Loja CTT Heróis de Chaimite (Odivelas)</p>
+                <p>Rua Heróis de Chaimite №43, Odivelas 2675-998</p>
+                <ul class="receptionPoint__list">
+                  <li>09:00–12:30</li>
+                  <li>14:00–18:00</li>
+                </ul>
+              </div>
+              <div class="receptionPoint__box">
+                <div class="receptionPoint__map">
+                  <img src="../img/map-small.jpg" alt="img">
+                </div>
+              </div>
+            </div>
+  
+            <div class="receptionPoint__kod">
+              <span class="receptionPoint__kod-title">Назовите код оператору в отделении, так он найдет ваш заказ</span>
+              <span class="receptionPoint__kod-value">5524222926</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   

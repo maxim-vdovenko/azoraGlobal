@@ -1,0 +1,146 @@
+.payment {
+  $bl: &;
+  @include block();
+  max-width: 470px;
+  margin: 0 auto;
+
+  @media (max-width: $screen_md) {
+    margin-top: 20px;
+  }
+
+  &__cont {
+    @include block();
+    min-height: 300px;
+    margin-top: 24px;
+    border-radius: 10px;
+    background-color: #e8f0fd;
+    padding: 20px 30px 30px 30px; 
+
+    @media (max-width: $screen_md) {
+      padding: 20px 10px; 
+      margin: 24px -20px 0 -20px;
+      border-radius: 0;
+    } 
+  }
+
+  &__block {
+    @include flex();
+    margin: 0 -12px 22px -12px;
+
+    @media (max-width: $screen_md) {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
+  
+  &__cards {
+    @include flex();
+  }
+
+  &__box {
+    position: relative;
+    padding: 0 12px;
+
+    @media (max-width: $screen_md) {
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(1) {
+      width: 62%;
+
+      @media (max-width: $screen_md) {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 38%;
+
+      @media (max-width: $screen_md) {
+        width: 100%;
+      }
+    }
+
+    &--double {
+      @media (max-width: $screen_md) {
+        width: 50% !important;
+
+        &:nth-child(1) {
+          padding-right: 6px;
+        }
+
+        &:nth-child(2) {
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+  
+  &__input {
+    @include block();
+
+    &-title {
+      @include block();
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-cont {
+      @include block();
+    }
+
+    &-valie {
+      @include block();
+      width: 100%;
+      height: 40px;
+      border-radius: 0;
+      border: 1px solid #0f1521;
+      background-color: transparent;
+      padding: 0 16px;
+    }
+  }
+
+  &__address {
+    @include block();
+
+    @media (max-width: $screen_md) {
+      margin: 0 10px;
+    }
+
+    &-title {
+      @include block();
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-value {
+      @include flex();
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 16px;
+    }
+
+    &-inf {
+      position: relative;
+      margin-left: 5px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 16px;
+      color: #98c8ae;
+    }
+  }
+
+  &__button {
+    @include block();
+    margin-top: 24px;
+
+    @media (max-width: $screen_xs) {
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}
