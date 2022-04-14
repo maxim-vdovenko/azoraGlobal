@@ -709,6 +709,10 @@
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.02em;
+
+    &--indentMin {
+      margin-top: 20px;
+    }
   }
 
   &__button {

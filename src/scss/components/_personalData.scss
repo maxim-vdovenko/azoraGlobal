@@ -1,0 +1,141 @@
+.personalData {
+  $bl: &;
+  @include block();
+
+  #{$cont} {
+    max-width: $width_big;
+  }
+
+  &__block {
+    @include flex();
+    min-height: calc(100vh - 68px);
+
+    @media (max-width: $screen_md) {
+      display: block;
+      min-height: auto;
+    }
+  }
+
+  &__box {
+    @include flex();
+    flex-direction: column;
+    
+    @media (max-width: $screen_md) {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      align-items: flex-end;
+      min-width: 340px;
+      padding: 38px 25px 14px 0;
+
+      @media (max-width: $screen_xl) {
+        min-width: auto;
+      } 
+
+      @media (max-width: $screen_md) {
+        padding: 25px 0 0 0;
+      }
+    }
+
+    &:nth-child(2) {
+      flex: 1;
+      padding: 44px 0 14px 138px;
+      border-left: 1px solid #E4E4E7;
+
+      @media (max-width: $screen_xl) {
+        padding-left: 45px;
+      } 
+
+      @media (max-width: $screen_md) {
+        border-left: none;
+        padding: 25px 0 0 0;
+      }  
+    }
+  }
+
+  &__nav {
+    @include block();
+    width: 217px;
+
+    @media (max-width: $screen_md) {
+      display: flex;
+      width: auto;
+      border-bottom: 1px solid #E4E4E7;
+    }
+
+    li {
+      @include block();
+
+      @media (max-width: $screen_md) {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+
+      &.active a {
+        background-color: #EAE4FF;
+
+        @media (max-width: $screen_md) {
+          background-color: transparent;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          border-bottom: 1px solid #67E17A;
+        }
+      }
+    }
+
+    a {
+      @include flex();
+      align-items: center;
+      min-height: 36px;
+      padding: 4px 16px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+
+      @media (max-width: $screen_md) {
+        top: 1px;
+        min-height: 24px;
+        padding: 0;
+        border-radius: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &__form {
+    @include block();
+    max-width: 447px;
+    padding-bottom: 40px;
+
+    @media (max-width: $screen_md) {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__button {
+    @include block();
+    margin-top: 36px;
+
+    @media (max-width: $screen_md) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: $side_mobile;
+      border-top: 1px solid #E4E4E7;
+      background-color: #fff;
+
+      .button {
+        width: 100%;
+      }
+    }  
+  }
+}

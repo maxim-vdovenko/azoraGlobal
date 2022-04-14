@@ -584,6 +584,86 @@
   }
 }
 
+.informBox {
+  @include block();
+  border: 1px solid #E4E4E7;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  &__unit {
+    @include block();
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #E4E4E7;
+    }
+  }
+
+  &__title {
+    @include flex();
+    align-items: center;
+    justify-content: space-between;
+    min-height: 36px;
+    padding: 5px 18px 5px 16px;
+
+    &-value {
+      position: relative;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    &-button {
+      @include image('arrow-purple.svg', auto 12px, right 0 center);
+      @include flex();
+      align-items: center;
+      padding-right: 16px;
+      min-height: 18px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: #6250E5;
+      cursor: pointer;
+    }
+  }
+
+  &__message {
+    position: relative;
+    display: none;
+    margin-top: -2px;
+    padding: 0 0 8px 32px;
+
+    &-name {
+      @include block();
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    &-link {
+      @include block();
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: #6250E5;
+      cursor: pointer;
+    }
+
+    &--warning {
+      @include image('warning-orange.svg', auto 12px, 16px 2px);
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
 .checkBox {
   @include block();
 

@@ -1,4 +1,5 @@
 .receptionPoint {
+  $point: &;
   @include block();
 
   &__name {
@@ -22,6 +23,27 @@
     line-height: 16px;
     letter-spacing: 0.02em;
     color: #9296A0;
+    
+    &--dark {
+      color: $color_dark;
+    }
+  }
+
+  &__info {
+    @include block();
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+
+    a {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: #6250E5;
+      text-decoration: none;
+    }
   }
 
   &__cont {
@@ -130,6 +152,90 @@
       font-size: 20px;
       line-height: 26px;
       letter-spacing: 0.02em;
+    }
+  }
+
+  &--big {
+    #{$point}__name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+
+      @media (max-width: $screen_md) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+      } 
+    }
+
+    #{$point}__date {
+      font-size: 14px;
+      line-height: 18px;
+
+      @media (max-width: $screen_md) {
+        font-size: 12px;
+        line-height: 16px;
+      } 
+    }
+
+    #{$point}__box {
+      > p {
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 18px;
+
+        @media (max-width: $screen_md) {
+          margin-bottom: 4px;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    #{$point}__list {
+      margin-top: 6px;
+
+      @media (max-width: $screen_md) {
+        margin-top: 4px;
+      }
+
+      li {
+        font-size: 14px;
+        line-height: 18px;
+
+        @media (max-width: $screen_md) {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    #{$point}__kod {
+      &-title {
+        padding-right: 0;
+        font-size: 14px;
+        line-height: 18px;
+
+        @media (max-width: $screen_md) {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      &-value {
+        margin-top: 6px;
+        font-size: 30px;
+        line-height: 120%;
+
+        @media (max-width: $screen_md) {
+          margin-top: 9px;
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
     }
   }
 }

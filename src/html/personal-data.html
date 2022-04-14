@@ -1,0 +1,159 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="personalData">
+
+      <div class="container">
+        
+        <div class="personalData__block">
+
+          <div class="personalData__box">
+
+            <ul class="personalData__nav">
+              <li><a href="orders.html">Заказы</a></li>
+              <li class="active"><a href="personal-data.html">Личные данные</a></li>
+            </ul>
+
+          </div>
+
+          <div class="personalData__box">
+
+            <div class="title title--middle"><h1>Личные данные</h1></div>
+            
+            <form class="personalData__form">
+
+              <div class="parcel__block">
+
+                <div class="inputBox">
+                  <span class="inputBox__title">Имя и фамилия</span>
+                  <input class="inputBox__value" type="text" value="Petrov Vasiliy" />
+                </div>
+
+                <div class="inputMultilevel inputMultilevel--double">
+
+                  <div class="inputMultilevel__unit">
+                    <div class="inputBox">
+                      <span class="inputBox__title">Телефон</span>
+                      <div class="selectPhone">
+                        <div class="select">
+                          <select>
+                            <option class="flag-az">+351</option>
+                            <option class="flag-ua">+380</option>
+                            <option class="flag-kz">+344</option>
+                            <option class="flag-pt">+370</option>
+                            <option class="flag-uz">+380</option>
+                            <option class="flag-kg">+390</option>
+                          </select>
+                        </div>
+                        <input class="selectPhone__value input-phone" type="text" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inputMultilevel__unit">
+                    <div class="inputBox inputBox--nif">
+                      <span class="inputBox__title">NIF</span>
+                      <input class="inputBox__value input-numbers" type="text" value="240144733" inputmode="text">
+                    </div>
+                  </div>
+                  
+                </div>
+  
+                <span class="parcel__separatorText parcel__separatorText--indentMin">Адрес</span>
+  
+                <div class="inputBox">
+                  <span class="inputBox__title">Регион</span>
+                  <div class="select">
+                    <select>
+                      <option>Выберите область</option>
+                      <option selected>Lisbon Metropolitan Area</option>
+                      <option>Одесса</option>
+                      <option>Львов</option>
+                      <option>Херсон</option>
+                      <option>Винница</option>
+                      <option>Днепр</option>
+                    </select>
+                  </div>
+                </div>
+  
+                <div class="inputBox">
+                  <span class="inputBox__title">Город или населенный пункт</span>
+                  <input class="inputBox__value" type="text" value="Lissabon" />
+                </div>
+  
+                <div class="inputBox">
+                  <span class="inputBox__title">Улица</span>
+                  <input class="inputBox__value" type="text" value="Jade-Mountain" />
+                </div>
+  
+                <div class="inputMultilevel">
+  
+                  <div class="inputMultilevel__unit">
+                    <div class="inputBox">
+                      <span class="inputBox__title">Дом</span>
+                      <input class="inputBox__value input-numbers" type="text" value="37" />
+                    </div>
+                  </div>
+  
+                  <div class="inputMultilevel__unit">
+                    <div class="inputBox">
+                      <span class="inputBox__title">Квартира</span>
+                      <input class="inputBox__value input-numbers" type="text" value="2" />
+                    </div>
+                  </div>
+  
+                  <div class="inputMultilevel__unit">
+                    <div class="inputBox">
+                      <span class="inputBox__title">Индекс</span>
+                      <input class="inputBox__value" type="text" value="1000-260" />
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <div class="informBox">
+
+                  <div class="informBox__unit">
+                    <div class="informBox__title">
+                      <span class="informBox__title-value">Эл. почта al***@mail.ru</span>
+                      <span class="informBox__title-button">Изменить</span>
+                    </div>
+                    <div class="informBox__message informBox__message--warning active">
+                      <span class="informBox__message-name">Почта не подтверждена</span>
+                      <span class="informBox__message-link">Отправить ссылку еще раз</span>
+                    </div>
+                  </div>
+
+                  <div class="informBox__unit">
+                    <div class="informBox__title">
+                      <span class="informBox__title-value">Пароль</span>
+                      <span class="informBox__title-button">Изменить</span>
+                    </div>
+                  </div>
+
+                </div>
+  
+              </div>
+
+              <div class="personalData__button">
+                <button class="button">Сохранить</button>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   

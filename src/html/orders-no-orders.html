@@ -1,0 +1,50 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="personalData">
+
+      <div class="container">
+        
+        <div class="personalData__block">
+
+          <div class="personalData__box">
+
+            <ul class="personalData__nav">
+              <li class="active"><a href="orders.html">Заказы</a></li>
+              <li><a href="personal-data.html">Личные данные</a></li>
+            </ul>
+
+          </div>
+
+          <div class="personalData__box">
+
+            <div class="title title--middle"><h1>Заказы</h1></div>
+            
+            <div class="orders-no-orders">
+              
+              <div class="orders-no-orders__text">
+                <p>У вас пока нет заказов.</p>
+              </div>
+
+              <div class="orders-no-orders__button">
+                <a class="button" href="#">Оформить</a>
+              </div>
+             
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   
