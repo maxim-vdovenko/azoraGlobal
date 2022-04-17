@@ -29,7 +29,7 @@
       min-width: 340px;
       padding: 38px 25px 14px 0;
 
-      @media (max-width: $screen_xl) {
+      @media (max-width: 1200px) {
         min-width: auto;
       } 
 
@@ -43,7 +43,7 @@
       padding: 44px 0 14px 138px;
       border-left: 1px solid #E4E4E7;
 
-      @media (max-width: $screen_xl) {
+      @media (max-width: 1200px) {
         padding-left: 45px;
       } 
 

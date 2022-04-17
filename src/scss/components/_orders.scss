@@ -16,7 +16,7 @@
   overflow: hidden;
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 
     @media (max-width: $screen_md) {
       margin-bottom: 20px;
@@ -76,6 +76,10 @@
     border-top: 1px solid #E0E0E0;
     border-right: 1px solid #E0E0E0;
 
+    &--half {
+      width: 50%;
+    }
+
     @media (max-width: $screen_md) {
       width: 100%;
       padding: 16px 12px 16px 12px;
@@ -90,6 +94,10 @@
     padding: 25px 16px;
     border-top: 1px solid #E0E0E0;
 
+    &--half {
+      width: 50%;
+    }
+    
     @media (max-width: $screen_md) {
       padding: 15px 12px;
       width: 100%;
@@ -123,6 +131,16 @@
     line-height: 16px;
     letter-spacing: 0.02em;
     color: #6250E5;
+
+    &--red {
+      background-color: #FED5D5;
+      color: #FD7272;
+    }
+
+    &--green {
+      background-color: #E8FCEB;
+      color: #40C855;
+    }
   }
 
   &__price {
