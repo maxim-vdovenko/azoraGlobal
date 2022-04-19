@@ -991,9 +991,11 @@
 
 .messenger {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   bottom: 0;
   right: 0;
-  padding: 0 20px 20px 0;
+  padding: 0 10px 10px 0;
   z-index: 1010;
 
   @media (max-width: $screen_md) {
@@ -1005,12 +1007,17 @@
     $box: &;
     position: relative;
     display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     width: 408px;
     background-color: #474A52;
     border-radius: 8px;
     padding: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
     @media (max-width: $screen_md) {
       width: 100%;
@@ -1033,27 +1040,49 @@
     }
 
     &-value {
-      @include image('check-green.svg', 24px auto, left);
       position: relative;
       display: inline-flex;
       align-items: center;
-      padding-left: 48px;
       min-height: 24px;
       font-weight: 700;
       font-size: 16px;
       line-height: 22px;
+      color: #fff;
 
       @media (max-width: $screen_md) {
-        padding-left: 32px;
         font-size: 14px;
         line-height: 20px;
         background-size: 20px auto;
       }
     }
 
+    &-link {
+      position: relative;
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      color: #9E91FB;
+      text-decoration: none;
+
+      @media (max-width: $screen_md) {
+        margin-top: 8px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     &--ok {
       #{$box}-value {
+        @include image('check-green.svg', 24px auto, left);
         color: #67E17A;
+        padding-left: 48px;
+
+        @media (max-width: $screen_md) {
+          padding-left: 32px;
+        }
       }
     }
   }
