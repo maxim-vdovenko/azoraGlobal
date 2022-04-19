@@ -870,6 +870,17 @@
     }
   }
 
+  &__overweight {
+    @include image('question-gray.svg', contain, center);
+    @include inline_block();
+    top: 2px;
+    margin-left: 4px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
   &__total {
     @include block();
     border-top: 1px solid #E4E4E7;

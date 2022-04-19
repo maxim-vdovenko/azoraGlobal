@@ -1,0 +1,138 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "header--border", "index" : 0, "authorization" : 1})
+
+
+    <section class="orderPage">
+
+      <div class="container">
+        
+        <div class="orderPage__back"><a href="#">К заказам</a></div>
+
+        <div class="orderPage__side">
+
+          <div class="orderPage__side-box">
+
+            <div class="orderPage__title">
+              <div class="title title--middle"><h2>Заказ 558833737</h2></div>
+              <a class="orderPage__cancel" href="#">Отменить заказ</a>
+            </div>
+
+          </div>
+
+          <div class="orderPage__side-box">
+
+            <div class="orderPage__block">
+
+              <div class="orderPage__box">
+                <div class="orderPage__name orderPage__name--package"><b></b><span>Посылка, 3 кг</span></div>
+                <div class="orderPage__table">
+
+                  <div class="orderPage__table-box">
+
+                    <div class="orderPage__table-head">
+                      <span class="orderPage__table-td">Описание</span>
+                      <span class="orderPage__table-td">Кол-во</span>
+                      <span class="orderPage__table-td">Цена</span>
+                      <span class="orderPage__table-td">Вес</span>
+                    </div>
+
+                    <div class="orderPage__table-body">
+                      <div class="orderPage__table-td"><span>Кофточка розовая</span><b>1 шт, 10€, 0,4 кг </b></div>
+                      <div class="orderPage__table-td"><span>1</span></div>
+                      <div class="orderPage__table-td"><span>10€</span></div>
+                      <div class="orderPage__table-td"><span>0,4 кг</span></div>
+                    </div>
+
+                    <div class="orderPage__table-body">
+                      <div class="orderPage__table-td"><span>Джинсы</span><b>1 шт, 15€, 0,9 кг </b></div>
+                      <div class="orderPage__table-td"><span>1</span></div>
+                      <div class="orderPage__table-td"><span>10€</span></div>
+                      <div class="orderPage__table-td"><span>0,4 кг</span></div>
+                    </div>
+
+                  </div>
+
+                  <div class="orderPage__table-box"></div>
+
+                </div>
+              </div>
+
+              <div class="orderPage__box">
+                <div class="orderPage__name orderPage__name--from"><b title="Антон">А</b><span>От кого</span></div>
+                <ul class="orderPage__listData">
+                  <li>Petrov Vasiliy</li>
+                  <li>example@post.com</li>
+                  <li>+351 673 88 88 9</li>
+                  <li>NIF 240144733</li>
+                  <li>1000-260, Portugalia, Lissabon 37 Jade-Mountain, apr 2,</li>
+                </ul>
+              </div>
+
+              <div class="orderPage__box">
+                <div class="orderPage__name orderPage__name--to"><b title="Володя">В</b><span>Кому</span></div>
+                <ul class="orderPage__listData">
+                  <li>Kalinin Mark</li>
+                  <li>+7 911 945-24-23</li>
+                  <li>197198, Russia, Saint-Petersburg, Mytninskiy lane 11, 54</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <a class="orderPage__cancelMobile" href="#">Отменить заказ</a>
+            
+          </div>
+
+          <div class="orderPage__side-box">
+
+            <div class="receptionPoint">
+              <span class="receptionPoint__name">Ожидайте курьера</span>
+              <span class="receptionPoint__date receptionPoint__date--dark">12 декабря, 9:00–12:00</span>
+    
+              <div class="receptionPoint__kod">
+                <span class="receptionPoint__kod-title">Назовите код оператору в отделении, так он найдет ваш заказ</span>
+                <span class="receptionPoint__kod-value">5524222926</span>
+              </div>
+            </div>
+
+            <div class="tracking">
+              <span class="tracking__title">Трекинг</span>
+              <ul class="tracking__list">
+                <li class="active"><span>Ждет отправки</span></li>
+                <li><span>В пути на склад</span></li>
+                <li><span>На проверке</span></li>
+                <li><span>Ожидает оплаты</span></li>
+                <li><span>Оплачен, ждет отправки</span></li>
+                <li><span>В пути</span></li>
+                <li><span>Доставлен</span></li>
+              </ul>
+            </div>
+
+            <div class="price">
+              <span class="price__title">Стоимость</span>
+              <span class="price__info">Может измениться после взвешивания посылки на складе. Поэтому оплачивается после проверки.</span>
+              <ul class="price__list">
+                <li><span>Пересылка</span><span>от 30€</span></li>
+                <li><span>Предоплата</span><span class="text-color-greenDark">-3€</span></li>
+                <li><span>Страховка</span><span>Бесплатно</span></li>
+              </ul>
+              <ul class="price__total">
+                <li><span>Итого</span><span>от 27€</span></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+  
+@@include('components/end.html')
+   
