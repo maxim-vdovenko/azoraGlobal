@@ -1,0 +1,47 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html', {"header" : "", "index" : 0, "authorization" : 0})
+
+
+    <section class="authorization authorization--empty">
+
+      <div class="container">
+
+        <div class="authorization__block">
+
+          <form class="authorization__form">
+
+            <div class="authorization__icon authorization__icon--email"></div>
+
+            <div class="title title--middle"><h1>Проверьте почту</h1></div>
+  
+            <div class="authorization__text">
+              <p>Отправили ссылку для восстановления пароля на example@mail.ru.</p>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- messenger -->
+    <div class="messenger">
+
+      <div class="messenger__box messenger__box--ok">
+        <div class="messenger__box-close"></div>
+        <span class="messenger__box-value">Пароль изменен</span>
+      </div>
+
+    </div>
+    <!-- END messenger -->
+
+  </div>
+
+@@include('components/end.html')
+   

@@ -989,6 +989,76 @@
   }
 }
 
+.messenger {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 20px 20px 0;
+  z-index: 1010;
+
+  @media (max-width: $screen_md) {
+    width: 100%;
+    padding: 0 20px 10px 20px;
+  }
+
+  &__box {
+    $box: &;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 408px;
+    background-color: #474A52;
+    border-radius: 8px;
+    padding: 24px;
+
+    @media (max-width: $screen_md) {
+      width: 100%;
+      padding: 18px 16px;
+    }
+
+    &-close {
+      @include image('close-gray.svg', contain, center);
+      position: absolute;
+      top: 12px;
+      right: 24px;
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+      z-index: 1;
+
+      @media (max-width: $screen_md) {
+        right: 14px;
+      }
+    }
+
+    &-value {
+      @include image('check-green.svg', 24px auto, left);
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 48px;
+      min-height: 24px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+
+      @media (max-width: $screen_md) {
+        padding-left: 32px;
+        font-size: 14px;
+        line-height: 20px;
+        background-size: 20px auto;
+      }
+    }
+
+    &--ok {
+      #{$box}-value {
+        color: #67E17A;
+      }
+    }
+  }
+}
+
 .link {
   font-weight: 500;
   font-size: 14px;
