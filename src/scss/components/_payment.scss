@@ -35,6 +35,29 @@
   
   &__cards {
     @include flex();
+    align-items: center;
+    margin-bottom: 28px;
+
+    @media (max-width: $screen_md) {
+      padding: 0 10px;
+    }
+
+    &-box {
+      position: relative;
+      margin-right: 13px;
+
+      &--Visa {
+        @include image('card/Visa.png', contain, center);
+        width: 50px;
+        height: 16px;
+      }
+
+      &--MasterCard {
+        @include image('card/MasterCard.svg', contain, center);
+        width: 42px;
+        height: 27px;
+      }
+    }
   }
 
   &__box {
@@ -42,7 +65,7 @@
     padding: 0 12px;
 
     @media (max-width: $screen_md) {
-      margin-bottom: 15px;
+      margin-bottom: 23px;
     }
 
     &:nth-child(1) {
@@ -98,6 +121,14 @@
       border: 1px solid #0f1521;
       background-color: transparent;
       padding: 0 16px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #9296A0;
+
+      &--name {
+        text-transform: uppercase;
+      }
     }
   }
 
