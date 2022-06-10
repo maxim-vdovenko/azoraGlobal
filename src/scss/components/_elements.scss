@@ -49,6 +49,7 @@
 }
 
 .button {
+  $bt: &;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -75,8 +76,20 @@
     letter-spacing: inherit;
   }
 
-  &:hover {
-    background-color: #343536;
+  &:not(#{$bt}--disabled) {
+    &:hover {
+      background-color: #474A52;
+    }
+  
+    &:active {
+      background-color: #6B6F7B;
+    }
+  }
+
+  &--disabled {
+    background-color: #D3D5D9;
+    color: #9296A0;
+    cursor: auto;
   }
 
   &--min {
@@ -88,8 +101,21 @@
     border: 1px solid #BDC0C6;
     color: $color_dark;
 
-    &:hover {
+    &:not(#{$bt}--disabled) {
+      &:hover {
+        background-color: #F1F2F3;
+      }
+
+      &:active {
+        background-color: #E2E0FC;
+      }
+    }
+
+    &#{$bt}--disabled {
       background-color: #F1F2F3;
+      border-color: #BDC0C6;
+      color: #9296A0;
+      cursor: auto;
     }
   }
 
@@ -116,8 +142,21 @@
       }
     }
 
-    &:hover {
+    &:not(#{$bt}--disabled) {
+      &:hover {
+        background-color: #F1F2F3;
+      }
+
+      &:active {
+        background-color: #E2E0FC;
+      }
+    } 
+
+    &#{$bt}--disabled {
       background-color: #F1F2F3;
+      border-color: #BDC0C6;
+      color: #9296A0;
+      cursor: auto;
     }
   }
 }
@@ -473,6 +512,7 @@
 }
 
 .inputBox {
+  $inp: &;
   @include block();
 
   &__title {
@@ -515,6 +555,18 @@
 
     @media (max-width: $screen_xs) {
       width: auto;
+    }
+  }
+
+  &--disabled {
+    #{$inp}__value {
+      background-color: #F1F2F3;
+    }
+  }
+
+  &--error {
+    #{$inp}__value {
+      border: 1px solid #ED2222; 
     }
   }
 }
@@ -717,6 +769,14 @@
         }
       }
     }
+
+    &:active {
+      & + label {
+        &:before {
+          background-color: #6B6F7B;
+        }
+      }
+    }
   }
 
   a {
@@ -730,6 +790,43 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+  
+  &--normal {
+    input {
+      & + label {
+        &:before, &:after {
+          width: 14px;
+          height: 14px;
+        }
+  
+        &:before {
+          background-color: transparent;
+          border: 1px solid #BDC0C6;
+        }
+  
+        &:after {
+          @include image('chek-gray.svg', 10px auto, 3px 4px);
+        }
+      }
+
+      &:hover {
+        & + label {
+          &:before {
+            border-color: #9E91FB;
+          }
+        }
+      }
+
+      &:active {
+        & + label {
+          &:before {
+            border-color: #1E49AF;
+            background-color: transparent;
+          }
+        }
+      }
     }
   }
 
@@ -751,11 +848,177 @@
         }
       }
 
+      &:active {
+        & + label {
+          &:before {
+            background-color: transparent;
+          }
+        }
+      }
+
       &:checked {
         & + label {
           &:before {
             border: 1px solid transparent;
           }
+        }
+      }
+    }
+  }
+
+  &--disabled {
+    input {
+      & + label {
+        &:before, &:after {
+          width: 14px;
+          height: 14px;
+        }
+
+        &:before {
+          background-color: #F1F2F3 !important; 
+          border: 1px solid #BDC0C6 !important; 
+        }
+      }
+    }
+  }
+
+  &--error {
+    input {
+      & + label {
+        &:before {
+          border: 1px solid #ED2222 !important; 
+        }
+      }
+    }
+  }
+}
+
+.radioBox {
+  @include block();
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    & + label {
+      @include inline_block();
+      min-height: 16px;
+      padding-left: 23px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      color: #333;
+      cursor: pointer;
+      user-select: none;
+
+      &:before {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #18191B;
+        border-radius: 1000px;
+        content: '';
+      }
+
+      &:after {
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        content: '';
+        opacity: 0;
+        background-color: #BDC0C6;
+        border-radius: 1000px;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:active {
+      & + label {
+        &:before {
+          background-color: #6B6F7B;
+        }
+      }
+    }
+  }
+
+  a {
+    @include inline_block();
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: #6250E5;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  &--normal {
+    input {
+      & + label {
+        &:before {
+          width: 14px;
+          height: 14px;
+          background-color: transparent;
+          border: 1px solid #BDC0C6;
+        }
+      }
+
+      &:hover {
+        & + label {
+          &:before {
+            border-color: #9E91FB;
+          }
+        }
+      }
+
+      &:active {
+        & + label {
+          &:before {
+            border-color: #1E49AF;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &--disabled {
+    input {
+      & + label {
+        &:before {
+          width: 14px;
+          height: 14px;
+          background-color: #F1F2F3 !important; 
+          border: 1px solid #BDC0C6 !important; 
+        }
+      }
+    }
+  }
+
+  &--error {
+    input {
+      & + label {
+        &:before {
+          border: 1px solid #ED2222 !important; 
         }
       }
     }

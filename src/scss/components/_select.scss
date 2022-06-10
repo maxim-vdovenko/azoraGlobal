@@ -106,6 +106,28 @@
         color: $color_dark;
       }
     }
+
+    &.disabled {
+      .jq-selectbox__select {
+        background-color: #F1F2F3;
+
+        &::before, &::after {
+          opacity: 0.4;
+        }
+      }
+      .jq-selectbox__select-text {
+        color: #9296A0;
+      }
+      .jq-selectbox__trigger {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &--error {
+    .jq-selectbox__select {
+      border: 1px solid #ED2222 !important; 
+    }
   }
 }
 
@@ -212,6 +234,10 @@
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.02em;
+  }
+
+  &--error {
+    box-shadow: 0 0 0 1px #ED2222;
   }
 }
 
