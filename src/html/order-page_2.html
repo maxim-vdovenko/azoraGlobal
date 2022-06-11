@@ -17,7 +17,7 @@
 
             <div class="orderPage__title">
               <div class="title title--middle"><h2>Заказ 558833737</h2></div>
-              <a class="orderPage__cancel" href="#">Отменить заказ</a>
+              <span class="orderPage__cancel modal-button" data-id="order-cancellation">Отменить заказ</span>
             </div>
 
           </div>
@@ -82,7 +82,7 @@
 
             </div>
 
-            <a class="orderPage__cancelMobile" href="#">Отменить заказ</a>
+            <span class="orderPage__cancelMobile modal-button" data-id="order-cancellation">Отменить заказ</span>
             
           </div>
 
@@ -133,6 +133,7 @@
     </section>
 
   </div>
-  
+
+@@include('components/modal.html')
 @@include('components/end.html')
    

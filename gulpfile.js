@@ -35,6 +35,7 @@ gulp.task('js', () => {
       src + '/js/tariffs.js',
       src + '/js/parcel.js',
       src + '/js/index.js',
+      src + '/js/modal.js',
     ])
   .pipe(concat('index.js'))
   // .pipe(uglify())

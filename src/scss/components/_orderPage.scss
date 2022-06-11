@@ -175,6 +175,8 @@
     letter-spacing: 0.02em;
     color: #FD7272;
     text-decoration: none;
+    cursor: pointer;
+    user-select: none;
 
     @media (max-width: $screen_md) {
       display: none;
@@ -195,6 +197,7 @@
     letter-spacing: 0.02em;
     color: #FD7272;
     text-decoration: none;
+    cursor: pointer;
 
     @media (max-width: $screen_md) {
       display: block;

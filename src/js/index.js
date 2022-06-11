@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   tariffs.init()
   select.init()
   parcel.init()
+  modal.init()
 })
 
 
