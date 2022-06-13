@@ -124,8 +124,8 @@
             <div class="parcel__checkSending">
               <span class="parcel__checkSending-title">Проверьте перед отправкой</span>
               <ul class="parcel__checkSending-list">
-                <li><span>Максимум 1 м3</span><a href="#">Проверить</a></li>
-                <li><span>Запрещено к отправке</span></li>
+                <li><span>Максимум 1 м3</span><span class="parcel__checkSending-list-butt modal-button" data-id="check-parcel-volume">Проверить</span></li>
+                <li><span class="parcel__checkSending-list-link modal-button" data-id="forbidden-send">Запрещено к отправке</span></li>
                 <li><span>Как упаковать посылку</span></li>
               </ul>
             </div>
@@ -140,5 +140,6 @@
 
   </div>
   
+@@include('components/modal.html')
 @@include('components/end.html')
    

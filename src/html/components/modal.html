@@ -1,18 +1,348 @@
+<div class="modal" id="customs-limits">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-close"></div>
+      <span class="modal__title">Таможенные лимиты</span>
+
+      <div class="modal__text">
+        <p>Пошлина считается как процент от превышения беспошлинного лимита. Как правило пошлину можно оплатить при получении или онлайн.</p>
+        <p>Например стоимость посылки 300€, таможенный лимит 200€, пошлина 15%. Расчет пошлины: (300-200)×0,15=15€.</p>
+      </div>
+
+      <div class="modal__limits limits">
+        <div class="limits__tab">
+
+          <div class="limits__tab-row limits__tab-row--head">
+            <div class="limits__tab-col"></div>
+            <div class="limits__tab-col"><b>Беспошлинный лимит*</b></div>
+            <div class="limits__tab-col"><b>Пошлина сверх лимита</b></div>
+          </div>
+
+          <div class="limits__tab-row">
+            <div class="limits__tab-col"><img src="img/flags/ua.svg" alt="img" /><span>Украина</span></div>
+            <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>300$</span></div>
+            <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15%</span></div>
+          </div>
+
+          <div class="limits__tab-row">
+            <div class="limits__tab-col"><img src="img/flags/by.svg" alt="img" /><span>Беларусь</span></div>
+            <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>200€</span></div>
+            <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15% или 4€ за 1 кг</span></div>
+          </div>
+
+          <div class="limits__tab-row">
+            <div class="limits__tab-col"><img src="img/flags/kz.svg" alt="img" /><span>Казахстан</span></div>
+            <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>500€</span></div>
+            <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>30% или 4€ за 1 кг</span></div>
+          </div>
+
+          <div class="limits__tab-row">
+            <div class="limits__tab-col"><img src="img/flags/uz.svg" alt="img" /><span>Узбекистан</span></div>
+            <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>1000$</span></div>
+            <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>30% или 3$ за 1 кг</span></div>
+          </div>
+
+          <div class="limits__tab-row">
+            <div class="limits__tab-col"><img src="img/flags/az.svg" alt="img" /><span>Азербайджан</span></div>
+            <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>300$</span></div>
+            <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15%</span></div>
+          </div>
+
+          <div class="limits__tab-row">
+            <div class="limits__tab-col"><img src="img/flags/kg.svg" alt="img" /><span>Кыргызстан</span></div>
+            <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>Без ограничений</span></div>
+            <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span></span></div>
+          </div>
+
+        </div>
+        <span class="limits__info">*  Таможенные лимиты часто меняются. Советуем перед отправкой проверить еще раз, чтобы не было непредвиденных платежей в момент получения.</span>
+      </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
 <div class="modal" id="order-cancellation">
 
   <div class="modal__block">
 
     <div class="modal__cont">
 
-      <div class="modal__close"></div>
+      <div class="modal__close modal-close"></div>
       <span class="modal__title">Отмена заказа</span>
+
       <div class="modal__text">
         <p>Мы не сможем вернуть вам 3€, которые вы заплатили как гарантию за отправку. Вы уверены что хотите отменить заказ?</p>
       </div>
   
       <div class="modal__buttons">
         <button class="button">Да, отменить заказ</button>
-        <span class="link">Нет, оставить</span>
+        <span class="link modal-close">Нет, оставить</span>
+      </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="modal" id="password-changes">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-close"></div>
+      <span class="modal__title">Изменения пароля</span>
+
+      <div class="modal__inputBox">
+
+        <div class="inputBox">
+          <span class="inputBox__title">Новый пароль</span>
+          <input class="inputBox__value" type="password">
+        </div>
+
+        <div class="inputBox">
+          <span class="inputBox__title">Повторите пароль</span>
+          <input class="inputBox__value" type="password">
+        </div>
+
+      </div>
+  
+      <div class="modal__buttons">
+        <button class="button">Сохранить</button>
+        <span class="link modal-close">Отмена</span>
+      </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="modal" id="mail-changes">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-close"></div>
+      <span class="modal__title">Изменения эл. почты</span>
+
+      <span class="modal__info modal__info--grey">Текущая почта al***@mail.ru</span>
+
+      <div class="modal__inputBox">
+
+        <div class="inputBox">
+          <span class="inputBox__title">Новая почта</span>
+          <input class="inputBox__value" type="email">
+        </div>
+
+      </div>
+  
+      <div class="modal__buttons">
+        <span class="button modal-button" data-id="clock-changes">Сохранить</span>
+        <span class="link modal-close">Отмена</span>
+      </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="modal" id="clock-changes">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-button" data-id="mail-changes"></div>
+      <div class="modal__icon modal__icon--clock"></div>
+      <span class="modal__title">Подтвердите действие</span>
+
+      <span class="modal__info">Отправили ссылку на al***@mail.ru. Перейдите по ссылке для изменения почты.</span>
+  
+      <div class="modal__buttons">
+        <button class="button">Продолжить</button>
+      </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="modal modal--map" id="reception-points">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-close"></div>
+      <span class="modal__title">Пункты приема <b>133</b></span>
+
+      <div class="modal__search">
+
+        <div class="searchBox">
+          <button class="searchBox__button"></button>
+          <input class="searchBox__value" type="text" placeholder="Поиск по адресу…">
+        </div>
+
+      </div>
+
+      <div class="modal__map">
+
+        <img src="img/map-big.jpg" img="img-map" />
+
+        <div class="modal__address">
+          <div class="modal__address-close"></div>
+          <span class="modal__address-title">Ponto CTT Casal da Silveira (pontinha)</span>
+          <span class="modal__address-info">R. São Cristóvão 875, Famões, 1685-820</span>
+          <ul class="modal__address-list">
+            <li>09:00–12:30</li>
+            <li>14:00–18:00</li>
+          </ul>
+          <div class="modal__address-button">
+            <button class="button button--min">Выбрать пункт</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="modal" id="check-parcel-volume">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-close"></div>
+      <span class="modal__title">Проверить объем посылки</span>
+
+      <span class="modal__info">Максимальный объем 1 м3.</span>
+  
+      <div class="modal__unit">
+
+        <div class="modal__unit-box">
+
+          <div class="inputUnit inputUnit--full">
+            <span class="inputUnit__title">Длина</span>
+            <div class="inputUnit__block">
+              <div class="inputUnit__box">
+                <input class="inputUnit__value input-numbers" type="text" maxlength="3" inputmode="text">
+                <span class="inputUnit__inf">см</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal__unit-box">
+
+          <div class="inputUnit inputUnit--full">
+            <span class="inputUnit__title">Ширина</span>
+            <div class="inputUnit__block">
+              <div class="inputUnit__box">
+                <input class="inputUnit__value input-numbers" type="text" maxlength="3" inputmode="text">
+                <span class="inputUnit__inf">см</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal__unit-box">
+
+          <div class="inputUnit inputUnit--full">
+            <span class="inputUnit__title">Высота</span>
+            <div class="inputUnit__block">
+              <div class="inputUnit__box">
+                <input class="inputUnit__value input-numbers" type="text" maxlength="3" inputmode="text">
+                <span class="inputUnit__inf">см</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--
+      <div class="modal__messagesBlock">
+
+        <div class="modal__message modal__message--success">
+          <span class="modal__message-title">0,02 м<sup>3</sup></span>
+        </div>
+
+        <div class="modal__message modal__message--error">
+          <span class="modal__message-title">1,32 м<sup>3</sup></span>
+          <div class="modal__message-text">
+            <p>Максимальный объем 1 м<sup>3</sup>. Попробуйте разделить на несколько посылок.</p>
+          </div>
+        </div>
+
+      </div>
+      -->
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="modal modal--forbidden" id="forbidden-send">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-close"></div>
+      <span class="modal__title">Запрещено к отправке</span>
+
+      <div class="modal__forbidden">
+
+        <div class="modal__forbidden-box modal__forbidden-box--gun">
+          <span>Оружие</span>
+        </div>
+
+        <div class="modal__forbidden-box modal__forbidden-box--fireworks">
+          <span>Взрывчатые, едкие и легковоспламеняющиеся вещества</span>
+        </div>
+
+        <div class="modal__forbidden-box modal__forbidden-box--drugs">
+          <span>Наркотики</span>
+        </div>
+
+        <div class="modal__forbidden-box modal__forbidden-box--flowers">
+          <span>Ядовитые животные и растения</span>
+        </div>
+
+        <div class="modal__forbidden-box modal__forbidden-box--grocery">
+          <span>Скоропортящиеся продукты питания</span>
+        </div>
+
+        <div class="modal__forbidden-box modal__forbidden-box--money">
+          <span>Деньги</span>
+        </div>
+
       </div>
       
     </div>

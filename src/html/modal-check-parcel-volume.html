@@ -1,0 +1,67 @@
+@@include('components/head.html', {"title" : ""})
+
+<div class="modal open" id="check-parcel-volume">
+
+  <div class="modal__block">
+
+    <div class="modal__cont">
+
+      <div class="modal__close modal-close"></div>
+      <span class="modal__title">Проверить объем посылки</span>
+
+      <span class="modal__info">Максимальный объем 1 м3.</span>
+  
+      <div class="modal__unit">
+
+        <div class="modal__unit-box">
+
+          <div class="inputUnit inputUnit--full">
+            <span class="inputUnit__title">Длина</span>
+            <div class="inputUnit__block">
+              <div class="inputUnit__box">
+                <input class="inputUnit__value input-numbers" type="text" maxlength="3" inputmode="text">
+                <span class="inputUnit__inf">см</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal__unit-box">
+
+          <div class="inputUnit inputUnit--full">
+            <span class="inputUnit__title">Ширина</span>
+            <div class="inputUnit__block">
+              <div class="inputUnit__box">
+                <input class="inputUnit__value input-numbers" type="text" maxlength="3" inputmode="text">
+                <span class="inputUnit__inf">см</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal__unit-box">
+
+          <div class="inputUnit inputUnit--full">
+            <span class="inputUnit__title">Высота</span>
+            <div class="inputUnit__block">
+              <div class="inputUnit__box">
+                <input class="inputUnit__value input-numbers" type="text" maxlength="3" inputmode="text">
+                <span class="inputUnit__inf">см</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+@@include('components/end.html')
+   

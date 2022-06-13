@@ -1,0 +1,73 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="modal open" id="customs-limits">
+
+    <div class="modal__block">
+
+      <div class="modal__cont">
+
+        <div class="modal__close modal-close"></div>
+        <span class="modal__title">Таможенные лимиты</span>
+
+        <div class="modal__text">
+          <p>Пошлина считается как процент от превышения беспошлинного лимита. Как правило пошлину можно оплатить при получении или онлайн.</p>
+          <p>Например стоимость посылки 300€, таможенный лимит 200€, пошлина 15%. Расчет пошлины: (300-200)×0,15=15€.</p>
+        </div>
+
+        <div class="modal__limits limits">
+          <div class="limits__tab">
+
+            <div class="limits__tab-row limits__tab-row--head">
+              <div class="limits__tab-col"></div>
+              <div class="limits__tab-col"><b>Беспошлинный лимит*</b></div>
+              <div class="limits__tab-col"><b>Пошлина сверх лимита</b></div>
+            </div>
+
+            <div class="limits__tab-row">
+              <div class="limits__tab-col"><img src="img/flags/ua.svg" alt="img" /><span>Украина</span></div>
+              <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>300$</span></div>
+              <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15%</span></div>
+            </div>
+
+            <div class="limits__tab-row">
+              <div class="limits__tab-col"><img src="img/flags/by.svg" alt="img" /><span>Беларусь</span></div>
+              <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>200€</span></div>
+              <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15% или 4€ за 1 кг</span></div>
+            </div>
+
+            <div class="limits__tab-row">
+              <div class="limits__tab-col"><img src="img/flags/kz.svg" alt="img" /><span>Казахстан</span></div>
+              <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>500€</span></div>
+              <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>30% или 4€ за 1 кг</span></div>
+            </div>
+
+            <div class="limits__tab-row">
+              <div class="limits__tab-col"><img src="img/flags/uz.svg" alt="img" /><span>Узбекистан</span></div>
+              <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>1000$</span></div>
+              <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>30% или 3$ за 1 кг</span></div>
+            </div>
+
+            <div class="limits__tab-row">
+              <div class="limits__tab-col"><img src="img/flags/az.svg" alt="img" /><span>Азербайджан</span></div>
+              <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>300$</span></div>
+              <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span>15%</span></div>
+            </div>
+
+            <div class="limits__tab-row">
+              <div class="limits__tab-col"><img src="img/flags/kg.svg" alt="img" /><span>Кыргызстан</span></div>
+              <div class="limits__tab-col"><b>Беспошлинный лимит*</b><span>Без ограничений</span></div>
+              <div class="limits__tab-col"><b>Пошлина сверх лимита</b><span></span></div>
+            </div>
+
+          </div>
+          <span class="limits__info">*  Таможенные лимиты часто меняются. Советуем перед отправкой проверить еще раз, чтобы не было непредвиденных платежей в момент получения.</span>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+@@include('components/end.html')
+   

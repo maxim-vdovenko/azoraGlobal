@@ -572,6 +572,7 @@
 }
 
 .inputUnit {
+  $unit: &;
   @include block();
 
   &__title {
@@ -633,6 +634,47 @@
     line-height: 18px;
     color: #9296A0;
     user-select: none;
+  }
+
+  &--full {
+    #{$unit}__box {
+      width: 100%;
+    }
+
+    #{$unit}__value {
+      width: 100%;
+    }
+  }
+}
+
+.searchBox {
+  @include block();
+
+  &__button {
+    @include image('search-grey.svg', auto 18px, left 16px center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &__value {
+    @include block();
+    height: 36px;
+    width: 100%;
+    padding: 0 16px 0 42px;
+    background-color: #fff;
+    border: 1px solid #D3D5D9;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #9296A0;
   }
 }
 

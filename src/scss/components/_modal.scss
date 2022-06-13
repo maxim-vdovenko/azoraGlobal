@@ -53,6 +53,7 @@
     padding: 36px 50px;
     border-radius: 20px;
     background-color: #fff;
+    overflow: hidden;
 
     @media (max-width: $screen_md) {
       max-width: none;
@@ -78,14 +79,48 @@
     }
   }
 
-  &__title {
+  &__icon {
     @include block();
+
+    &--clock {
+      @include image('clock-grey.svg', contain, center);
+      width: 32px;
+      height: 32px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    @include flex();
+    padding-right: 30px;
     font-size: 30px;
     line-height: 120%;
     letter-spacing: 0.02em;
 
+    b {
+      position: relative;
+      margin-left: 10px;
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: #9296A0;
+    }
+
     @media (max-width: $screen_md) {
       font-size: 20px;
+    }
+  }
+
+  &__info {
+    @include block();
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+
+    &--grey {
+      color: #9296A0;
     }
   }
 
@@ -100,7 +135,19 @@
       line-height: 18px;
 
       &:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &__inputBox {
+    @include block();
+    max-width: 360px;
+    margin-top: 36px;
+
+    .inputBox {
+      &:not(:last-child) {
+        margin-bottom: 16px;
       }
     }
   }
@@ -110,5 +157,343 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 36px;
+  }
+
+  &__limits {
+    margin-top: 35px;
+  }
+
+  &__search {
+    @include block();
+    margin-top: 23px;
+    max-width: 350px;
+  }
+
+  &__map {
+    @include block();
+    min-height: 546px;
+    margin: 23px -50px -36px -50px;
+    background-color: #D3D5D9;
+
+    @media (max-width: $screen_md) {
+      position: absolute;
+      top: 140px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+    }
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__address {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    width: 300px;
+    min-height: 290px;
+    top: 30px;
+    left: 50px;
+    padding: 36px 24px 24px 24px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(61, 50, 70, 0.05), 0px 4px 30px rgba(61, 50, 70, 0.25);
+    border-radius: 20px;
+
+    @media (max-width: $screen_md) {
+      top: auto;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      min-height: auto;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &-close {
+      @include image('close-gray.svg', contain, center);
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &-title {
+      @include block();
+      padding-right: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+    }
+
+    &-info {
+      @include block();
+      margin: 18px 10px 0 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    &-list {
+      @include block();
+      margin-top: 4px;
+
+      li {
+        @include inline_block();
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        color: #9296A0;
+
+        &:not(:last-child):after {
+          @include inline_block();
+          font-size: inherit;
+          line-height: inherit;
+          letter-spacing: inherit;
+          color: inherit;
+          content: ',';
+        }
+      }
+    }
+
+    &-button {
+      position: relative;
+      margin: auto 0 0 0;
+      padding-top: 17px;
+    }
+  }
+
+  &__unit {
+    @include flex();
+    margin-top: 36px;
+    max-width: 438px;
+
+    @media (max-width: $screen_md) {
+      display: block;
+      max-width: none;
+    }
+
+    &-box {
+      position: relative;
+      flex: 1;
+      padding-right: 16px;
+
+      @media (max-width: $screen_md) {
+        display: block;
+        padding-right: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  &__messagesBlock {
+    @include block();
+    margin-top: 36px;
+  }
+
+  &__message {
+    $mes: &;
+    @include block();
+    max-width: 423px;
+    min-height: 46px;
+    padding: 10px 16px;
+    border-radius: 10px;
+
+    @media (max-width: $screen_md) {
+      max-width: none;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      @include flex();
+      align-items: center;
+      min-height: 18px;
+      padding-left: 28px;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0.02em;
+
+      sup {
+        position: relative;
+        top: -4px;
+        font-size: 12px;
+      }
+    }
+
+    &-text {
+      @include block();
+      margin-top: 10px;
+
+      p {
+        @include block();
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+      }
+
+      sup {
+        position: relative;
+        top: 1px;
+        font-size: 9px;
+      }
+    }
+    
+    &--success {
+      background-color: #D8F2DC;
+
+      #{$mes}-title {
+        @include image('chek-green.svg', 18px auto, left 0 center);
+      }
+    }
+
+    &--error {
+      background-color: #FFCDCD;
+
+      #{$mes}-title {
+        @include image('error-red.svg', 18px auto, left 0 center);
+      }
+    }
+  }
+
+  &__forbidden {
+    @include flex();
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    @media (max-width: $screen_md) {
+      margin-top: 5px;
+    }
+
+    &-box {
+      position: relative;
+      width: 33.33%;
+      margin-top: 36px;
+
+      @media (max-width: $screen_md) {
+        width: 50%;
+        margin-top: 30px;
+      }
+
+      &:before {
+        @include block();
+        width: 94px;
+        height: 94px;
+        margin: 0 auto;
+        content: '';
+
+        @media (max-width: $screen_md) {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      span {
+        @include block(center);
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+
+        @media (max-width: $screen_md) {
+          margin-top: 12px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      &--gun {
+        &:before {
+          @include image('forbidden-send/gun.svg', 85px auto, center);
+
+          @media (max-width: $screen_md) {
+            background-size: 65px auto;
+          }
+        }
+      }
+
+      &--fireworks {
+        &:before {
+          @include image('forbidden-send/fireworks.svg', 37px auto, center);
+
+          @media (max-width: $screen_md) {
+            background-size: 28px auto;
+          }
+        }
+      }
+
+      &--drugs {
+        &:before {
+          @include image('forbidden-send/drugs.svg', 77px auto, center);
+
+          @media (max-width: $screen_md) {
+            background-size: 58px auto;
+          }
+        }
+      }
+
+      &--flowers {
+        &:before {
+          @include image('forbidden-send/flowers.svg', 48px auto, center);
+
+          @media (max-width: $screen_md) {
+            background-size: 35px auto;
+          }
+        }
+      }
+
+      &--grocery {
+        &:before {
+          @include image('forbidden-send/grocery.svg', 50px auto, center);
+
+          @media (max-width: $screen_md) {
+            background-size: 38px auto;
+          }
+        }
+      }
+
+      &--money {
+        &:before {
+          @include image('forbidden-send/money.svg', 93px auto, center);
+
+          @media (max-width: $screen_md) {
+            background-size: 68px auto;
+          }
+        }
+      }
+    }
+  }
+
+  &--map {
+    #{$bl}__cont {
+      max-width: 1280px;
+    }
+  }
+  
+  &--forbidden {
+    #{$bl}__cont {
+      max-width: 761px;
+    }
+  }
+
+  &-close, &-button {
+    cursor: pointer;
   }
 }
