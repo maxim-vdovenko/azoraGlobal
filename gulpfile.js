@@ -32,6 +32,7 @@ gulp.task('js', () => {
       'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
       src + '/js/tariffs.js',
       src + '/js/parcel.js',
       src + '/js/index.js',
