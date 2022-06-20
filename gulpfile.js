@@ -13,7 +13,9 @@ const src = 'src'
 const dist = 'dist'
 
 gulp.task('scss', () => {
-  return gulp.src(src + '/scss/style.scss')
+  return gulp.src([
+      src + '/scss/style.scss',
+    ])
     .pipe(scss({outputStyle: 'expanded'}).on('error', scss.logError))
     // .pipe(cssnano()) 
     .pipe(gulp.dest(dist + '/css'))
@@ -33,6 +35,7 @@ gulp.task('js', () => {
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+      'node_modules/air-datepicker/air-datepicker.js',
       src + '/js/tariffs.js',
       src + '/js/parcel.js',
       src + '/js/index.js',

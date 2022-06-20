@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   select.init()
   parcel.init()
   modal.init()
+
+  new AirDatepicker('.input-calendar')
 })
 
 
