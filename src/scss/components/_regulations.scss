@@ -80,6 +80,11 @@
         background-color: #fff;
         border: 1px solid #D3D5D9;
         border-radius: 10px;
+        transition: border-color $time;
+
+        &:hover {
+          border-color: #9E91FB;
+        }
       }
 
       &-unit {

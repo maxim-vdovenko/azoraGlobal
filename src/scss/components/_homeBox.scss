@@ -163,6 +163,11 @@
         font-size: 14px;
         line-height: 18px;
         letter-spacing: 0.02em;
+        transition: border-color $time;
+
+        &:hover {
+          border-color: #9E91FB;
+        }
       }
     }
 

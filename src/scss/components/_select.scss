@@ -23,7 +23,7 @@
       border-radius: 10px;
       background-color: #fff;
       border: 1px solid #D3D5D9;
-      transition: background-color 0.15s;
+      transition: background-color $time, border-color $time;
       user-select: none;
 
       &-text {
@@ -93,6 +93,12 @@
       }
     }
 
+    &:hover:not(.disabled) {
+      .jq-selectbox__select {
+        border-color: #9E91FB;
+      }
+    }
+
     &.opened {
       z-index: 10 !important;
 
@@ -132,11 +138,13 @@
 }
 
 .selectPhone {
+  $sel: &;
   @include flex();
   top: 1px;
   height: 34px;
   border-radius: 10px;
   box-shadow: 0 0 0 1px #D3D5D9;
+  transition: box-shadow $time;
 
   .select {
     max-width: 84px;
@@ -238,6 +246,10 @@
 
   &--error {
     box-shadow: 0 0 0 1px #ED2222;
+  }
+
+  &:hover:not(#{$sel}--disabled):not(#{$sel}--error) {
+    box-shadow: 0 0 0 1px #9E91FB;
   }
 }
 

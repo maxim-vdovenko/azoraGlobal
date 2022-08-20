@@ -125,9 +125,14 @@
       font-size: 18px;
       line-height: 22px;
       color: #9296A0;
+      transition: border-color $time;
 
       &--name {
         text-transform: uppercase;
+      }
+
+      &:hover {
+        border-color: #9E91FB;
       }
     }
   }
